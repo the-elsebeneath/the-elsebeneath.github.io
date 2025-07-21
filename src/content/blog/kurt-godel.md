@@ -5,7 +5,7 @@ date: 2024-08-08
 image: "@assets/blog/kurt-godel.jpg"
 imageAlt: Profile of Kurt Godel
 categories: [Mathematics]
-author: jane-doe
+author: juno-threadborne
 tags: [biography, logic]
 ---
 

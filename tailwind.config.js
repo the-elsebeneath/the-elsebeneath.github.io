@@ -12,7 +12,7 @@ let h1 = h2 * font_scale;
 
 let fontPrimary = "serif";
 let fontPrimaryType = "serif";
-let fontSecondary = "open sans";
+let fontSecondary = "Lora";
 let fontSecondaryType = "sans-serif";
 
 fontPrimary = fontPrimary

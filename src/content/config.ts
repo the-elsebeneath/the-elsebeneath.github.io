@@ -132,28 +132,22 @@ const portfolio = defineCollection({
   }),
 });
 
-const recipes = defineCollection({
+const books = defineCollection({
   loader: glob({
     pattern: "**\/[^_]*.{md,mdx}",
-    base: "./src/content/recipes",
+    base: "./src/content/books",
   }),
   schema: ({ image }) =>
     searchable.extend({
-      date: z.date().optional(),
+      order: z.number().optional(),
+      id: z.string().optional(),
+      slug: z.string().optional(),
+      title: z.string(),
+      description: z.string().optional(),
       image: image().optional(),
       imageAlt: z.string().default(""),
       author: reference("authors").optional(),
-      prepTime: z.number().optional(),
-      servings: z.number().optional(),
-      diet: z.string().optional(),
-      ingredients: z
-        .object({
-          list: z.array(z.string()),
-          qty: z.array(z.string()),
-        })
-        .optional(),
-      instructions: z.array(z.string()).optional(),
-      notes: z.array(z.string()).optional(),
+      readLink: z.string().url().optional(),
     }),
 });
 
@@ -172,6 +166,6 @@ export const collections = {
   indexCards,
   poetry,
   portfolio,
-  recipes,
+  books,
   terms,
 };

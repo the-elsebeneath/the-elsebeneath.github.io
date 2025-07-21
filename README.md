@@ -19,7 +19,7 @@ Astrogon is a rapidly-customizable multipurpose website template built using Ast
   - **Multi-level** document structure
   - Toggleable **Doc Browser** sidebar
   - Toggleable **Table of Contents** sidebar
-- Recipes
+- Books
   - Demonstrates a highly **templated structure**
 - Authors - A collection that can **link entries across collections** by the Author field
 - Poetry - A trim interface for a lightweight collection, demonstrating pagination over the content pages
