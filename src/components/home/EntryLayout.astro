@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { image, imageAlt, title, content, button } = entry.data;
+const { image, imageAlt, title, content } = entry.data;
 ---
 
 <BaseLayout>
@@ -36,14 +36,17 @@ const { image, imageAlt, title, content, button } = entry.data;
           <h1 set:html={markdownify(title)} class="mb-4" />
           <p set:html={markdownify(content)} class="mb-8" />
           {
-            button && (
-              <Button
-                label={button.label}
-                link={button.link}
-                newtab
-                hoverInvert
-                color=""
-              />
+            entry.data.buttons && entry.data.buttons.length && (
+              <div class="flex flex-wrap justify-center gap-4">
+                {entry.data.buttons.map((btn) => (
+                  <Button
+                    label={btn.label}
+                    link={btn.link}
+                    hoverInvert
+                    color=""
+                  />
+                ))}
+              </div>
             )
           }
         </div>
