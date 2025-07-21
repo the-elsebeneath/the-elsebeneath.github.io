@@ -4,15 +4,14 @@ id: elsewhere
 slug: elsewhere
 title: Elsewhere, Briefly
 description: A quiet boy finds himself in a library where forgotten thoughts gather like dust, waiting to be remembered.
-image: '@assets/books/elsewhere-cover.png'
+image: "@assets/books/elsewhere-cover.png"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://junothreadborne.me/elsewhere
 ---
 
-**Elsewhere, Brieflys**  
+**Elsewhere, Brieflys**
 
 _Book 6 of The Elsebeneath series_
-
 
 This is a quirky, whimsical journey through a surreal, shifting part of the Elsebeneath where echoes, unfinished thoughts, and emotional missteps take center stage. Sam and his unpredictable companion Fen embark on a seemingly simple errand that quickly spirals into a series of absurd and metaphor-rich challenges—mispronunciations, emotional buffets, conversations with living objects, and refracted memories in endless mirrors.
 

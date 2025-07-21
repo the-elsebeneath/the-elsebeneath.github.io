@@ -45,16 +45,11 @@ All Elsebeneath stories and written content on this site are licensed under:
 You are free to:
 
 - **Share** — copy and redistribute the material in any medium or format
-    
 - **Adapt** — remix, transform, and build upon the material  
-    As long as you follow these terms:
-    
+   As long as you follow these terms:
 - **Attribution** — You must give appropriate credit, link to the license, and indicate if changes were made.
-    
 - **NonCommercial** — You may not use the material for commercial purposes.
-    
 - **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
-    
 
 > These stories were written with heart and help. Please share them in kind.
 
@@ -63,16 +58,13 @@ You are free to:
 ## Terms
 
 1. This site is an experiment in storytelling and collaboration. It includes personal opinions, imagined places, and metaphors that sometimes misbehave.
-    
 2. No promises are made about completeness, accuracy, or consistency—this is a living project.
-    
 3. You are responsible for how you use what you read here. Especially if you try to build a chimepost in your backyard.
-    
 4. These terms may shift with the wind. Check back if you're curious.
-    
 
 ---
 
 ## Attributions
 
 This site was built on [Astrogon](https://github.com/astrogon/astrogon) by [Reed Nelson](https://github.com/reednel), licensed under:
+```

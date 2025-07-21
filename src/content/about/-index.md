@@ -37,13 +37,11 @@ I guided the narratives, rewrote every line that didn’t sing, and held the emo
 This is not "AI slop."  
 This is something else entirely.
 
-
 <br/>
 
 ---
 
 <br/>
-
 
 ### 🧵 Why release it for free?
 
@@ -56,33 +54,29 @@ For questions too big to answer cleanly.
 
 And because I believe storytelling, like care, shouldn’t come with a price tag.
 
-
 <br/>
 
 ---
 
 <br/>
 
-
 ### 📚 What is this site?
 
 This is an experiment:  
-Can we make stories that feel *real*—resonant, lyrical, thoughtful—by weaving human emotion and machine possibility together?
+Can we make stories that feel _real_—resonant, lyrical, thoughtful—by weaving human emotion and machine possibility together?
 
 Can a story written partly by a model… still make you cry?  
-Can it feel like *you were seen*?
+Can it feel like _you were seen_?
 
 I think so.  
 I hope so.  
 That’s what this site is here to explore.
 
-
 <br/>
 
 ---
 
 <br/>
-
 
 Thanks for visiting.  
 And if your thoughts ever wander—don’t worry.  

@@ -41,7 +41,7 @@ await Promise.all(
     const groupEntries = (await getEntriesInGroup(
       "docs",
       group.id.replace("/-index", ""),
-      sortByTitle
+      sortByTitle,
     )) as DocsEntry[];
     browserMenu.push({
       title: group.data.title,
@@ -52,7 +52,7 @@ await Promise.all(
         children: [],
       })),
     });
-  })
+  }),
 );
 ---
 

@@ -4,12 +4,12 @@ id: island
 slug: island
 title: The Island of Almosts
 description: A quiet boy struggles with skill development.
-image: '@assets/books/island-cover.webp'
+image: "@assets/books/island-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://thrd.me/else
 ---
 
-**The Island of Almosts**  
+**The Island of Almosts**
 
 _Book 1 of The Elsebeneath series_
 

@@ -4,12 +4,12 @@ id: archive
 slug: archive
 title: The Archive of Unsaid Things
 description: A quiet boy finds himself in a library where forgotten thoughts gather like dust, waiting to be remembered.
-image: '@assets/books/archive-cover.webp'
+image: "@assets/books/archive-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.'
 readLink: https://junothreadborne.me/archive
 ---
 
-**The Archive of Unsaid Things**  
+**The Archive of Unsaid Things**
 
 _Book 5 of The Elsebeneath series_
 

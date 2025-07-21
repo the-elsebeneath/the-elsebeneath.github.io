@@ -4,14 +4,14 @@ id: village
 slug: village
 title: The Village of Voicekeepers
 description: A quiet boy struggles with skill development.
-image: '@assets/books/village-cover.webp'
+image: "@assets/books/village-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://junothreadborne.me/village
 ---
 
-**The Village of Voicekeepers**  
+**The Village of Voicekeepers**
 
-_Book 4 of The Elsebeneath series_  
+_Book 4 of The Elsebeneath series_
 
 Sam returns to a place where forgotten voices and half-heard thoughts weave the fabric of reality. Here, the wind doesn’t just carry sound—it carries meaning, memory, and sometimes, the weight of things left unsaid.
 

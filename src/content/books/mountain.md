@@ -4,11 +4,10 @@ id: mountain
 slug: mountain
 title: The Mountain of Mastery
 description: A quiet boy struggles with skill development.
-image: '@assets/books/mountain-cover.webp'
+image: "@assets/books/mountain-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://thrd.me/else
 ---
-
 
 **The Mountain of Mastery**
 
@@ -23,4 +22,3 @@ Sam meets others on the mountain—like the reclusive goat who builds delicate s
 As the mountain narrows and the wind whispers doubts in his ear, Sam learns to face his fears, accept imperfection, and let go of rigid patterns. The summit offers no grand reward, only a quiet pool reflecting the weight he carries and the growth he’s made. There, Sam understands that mastery isn’t about solving the puzzle perfectly, but about continuing the climb with openness and readiness to share what he’s built.
 
 In the end, the mountain isn’t just a place or a challenge—it’s a living metaphor for becoming, for carrying the unfinished, and for finding strength in the ongoing journey.
-
