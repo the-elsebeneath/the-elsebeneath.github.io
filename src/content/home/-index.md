@@ -3,8 +3,7 @@ image: "@assets/art/elsebeneath.webp"
 imageAlt: A ribbon caught in the wind
 title: Welcome to the Elsebeneath
 content: |
-  A quiet collection of stories  
-  stitched from memory, wind, and what we almost said.
+  A quiet collection of stories stitched from memory, wind, and what we almost said.
 
   Some were written for my son.  
   All were written to be shared.
