@@ -10,6 +10,7 @@ import {
   FaLinkedin,
   FaPinterest,
   FaTiktok,
+  FaCoffee,
   FaGlobe,
   FaYoutube,
 } from "react-icons/fa";
@@ -67,6 +68,20 @@ const iconClass =
           >
             <span class="sr-only">GitHub</span>
             <FaGithub className="w-6 h-6" />
+          </a>
+        </li>
+      )}
+      {links.kofi && (
+        <li class={liClass}>
+          <a
+            class={iconClass}
+            aria-label="GitHub"
+            href={links.kofi}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            <span class="sr-only">Buy me a coffee!</span>
+            <FaCoffee className="w-6 h-6" />
           </a>
         </li>
       )}

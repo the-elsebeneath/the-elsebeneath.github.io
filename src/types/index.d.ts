@@ -35,6 +35,7 @@ export type SocialLinks = {
   tiktok?: string;
   website?: string;
   youtube?: string;
+  kofi?: string;
 };
 
 export type EntryReference = {

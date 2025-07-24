@@ -126,8 +126,10 @@ const baseUrl = "https://the-elsebeneath.github.io";
       integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
       crossorigin="anonymous"
       onload="renderMathInElement(document.body);"></script>
-    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
-    ></script>
+    <!-- <script
+      defer
+      src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
+      crossorigin="anonymous"></script> -->
     <!-- https://docs.astro.build/en/guides/view-transitions -->
     <ClientRouter fallback="swap" />
     <Tooltips interactive={false} delay={[333, 0]} />
@@ -140,13 +142,13 @@ const baseUrl = "https://the-elsebeneath.github.io";
     </main>
     <Footer />
     <!-- <ObserverScript /> -->
-    <script>
+    <!-- <script is:inline>
       kofiWidgetOverlay.draw("junothreadborne", {
         type: "floating-chat",
         "floating-chat.donateButton.text": "Support me",
         "floating-chat.donateButton.background-color": "#00b9fe",
         "floating-chat.donateButton.text-color": "#fff",
       });
-    </script>
+    </script> -->
   </body>
 </html>

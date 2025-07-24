@@ -84,3 +84,14 @@ There’s a place for them here.
 
 🕊️  
 Juno
+
+
+<br/>
+
+---
+
+<br/>
+
+#### ☕ If you like what you see and would like to support my work, feel free to <a class="underline link" href="https://thrd.me/tip">buy me a coffee.</a>
+
+<br/>
