@@ -29,6 +29,22 @@ const baseUrl = "https://the-elsebeneath.github.io";
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-908G1CG0HH"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-908G1CG0HH");
+    </script>
+    <script
+      defer
+      src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
+      crossorigin="anonymous"></script>
     <!-- favicon -->
     <link
       rel="apple-touch-icon"
@@ -126,26 +142,9 @@ const baseUrl = "https://the-elsebeneath.github.io";
       integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
       crossorigin="anonymous"
       onload="renderMathInElement(document.body);"></script>
-    <!-- <script
-      defer
-      src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
-      crossorigin="anonymous"></script> -->
     <!-- https://docs.astro.build/en/guides/view-transitions -->
     <ClientRouter fallback="swap" />
     <Tooltips interactive={false} delay={[333, 0]} />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-908G1CG0HH"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-908G1CG0HH");
-    </script>
   </head>
   <body>
     <Background />
@@ -155,13 +154,13 @@ const baseUrl = "https://the-elsebeneath.github.io";
     </main>
     <Footer />
     <!-- <ObserverScript /> -->
-    <!-- <script is:inline>
+    <script is:inline>
       kofiWidgetOverlay.draw("junothreadborne", {
         type: "floating-chat",
         "floating-chat.donateButton.text": "Support me",
         "floating-chat.donateButton.background-color": "#00b9fe",
         "floating-chat.donateButton.text-color": "#fff",
       });
-    </script> -->
+    </script>
   </body>
 </html>
