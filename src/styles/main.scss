@@ -16,3 +16,26 @@
 @layer utilities {
   @include meta.load-css("utilities");
 }
+
+
+.kofi-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff !important;
+  letter-spacing: -0.15px !important;
+  text-wrap: none;
+  vertical-align: middle;
+  line-height: 33px !important;
+  padding: 0;
+  text-align: center;
+  text-decoration: none !important;
+  text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
+}
+
+.kofi-button img {
+  height: 15px !important;
+  width: 19px !important;
+  display: initial;
+  animation: kofi-wiggle 3s infinite;
+}
