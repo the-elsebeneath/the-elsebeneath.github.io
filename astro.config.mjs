@@ -12,7 +12,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://the-elsebeneath.github.io",
+  site: "https://elsebeneath.online",
   base: "/",
   trailingSlash: "ignore",
   prefetch: {
