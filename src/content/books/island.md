@@ -6,7 +6,7 @@ title: The Island of Almosts
 description: A quiet boy struggles with skill development.
 image: "@assets/books/island-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
-readLink: https://medium.com/the-elsebeneath/the-island-of-almosts-8942025271c4
+readLink: https://junothreadborne.me/docs/The%20Island%20of%20Almosts.pdf
 ---
 
 **The Island of Almosts**

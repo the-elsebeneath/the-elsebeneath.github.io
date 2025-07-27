@@ -52,18 +52,6 @@ const { Content } = await render(entry);
             <div
               class="glass rounded-lg p-2 h-full intersect:animate-fadeUp opacity-0"
             >
-              <!-- Author -->
-              {
-                author && (
-                  <div class="m-4">
-                    <a href={`/authors/${slugify(author.id)}`}>
-                      <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-                      {upperHumanize(author.id)}
-                    </a>
-                  </div>
-                )
-              }
-
               <!-- Description -->
               {
                 description && (
@@ -74,6 +62,7 @@ const { Content } = await render(entry);
                       {entry.data.readLink && (
                         <div class="mt-6 text-right">
                           <a
+                            target="_blank"
                             href={entry.data.readLink}
                             class="inline-block rounded-lg bg-accent px-4 py-2 text-white font-semibold shadow hover:bg-accent/80 transition"
                           >
