@@ -6,7 +6,7 @@ title: The Valley of Yet-Stills
 description: A quiet boy struggles with skill development.
 image: "@assets/books/valley-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
-readLink: https://junothreadborne.me/docs/The%20Valley%20of%20Yet-Stills.pdf
+readLink: https://junothreadborne.me/valley
 ---
 
 **The Valley of Yet-Stills**
