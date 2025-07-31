@@ -6,7 +6,6 @@ interface Props {
 }
 const { entry } = Astro.props;
 const { title, image, imageAlt, author, description } = entry.data;
-
 // Helper function to create tracking-friendly slug from title
 function createTrackingId(title: string): string {
   return title
@@ -34,7 +33,7 @@ function createTrackingId(title: string): string {
         {
           image && (
             <Image
-              class="absolute object-cover w-full h-full transition-transform duration-300 group-hover:scale-[105%]"
+              class="absolute object-cover w-full h-full transition-transform duration-300 group-hover:scale-[105%] pointer-events-none"
               src={image}
               alt={imageAlt ?? title}
               width={500}
@@ -44,7 +43,7 @@ function createTrackingId(title: string): string {
           )
         }
         <div
-          class="absolute bottom-0 w-full bg-black/60 backdrop-blur-sm p-3 text-white"
+          class="absolute bottom-0 w-full bg-black/60 backdrop-blur-sm p-3 text-white pointer-events-none"
         >
           <h3 class="text-lg font-semibold">{title}</h3>
           {author && <p class="text-sm italic opacity-80">by {author}</p>}
