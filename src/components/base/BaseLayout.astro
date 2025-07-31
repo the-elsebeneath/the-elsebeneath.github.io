@@ -21,7 +21,7 @@ const { title, description, image, noindex, canonical } = Astro.props;
 
 const siteTitle = "The Elsebeneath";
 const siteDescription = "The Elsebeneath";
-const siteImage = "@assets/art/elsebeneath.webp";
+const siteImage = "/elsebeneath.webp";
 const siteAuthor = "Juno Threadborne";
 const baseUrl = "https://elsebeneath.online";
 ---
@@ -51,6 +51,9 @@ const baseUrl = "https://elsebeneath.online";
       function gtag() {
         dataLayer.push(arguments);
       }
+      gtag("set", "linker", {
+        domains: ["elsebeneath.online", "junothreadborne.me", "ko-fi.com"],
+      });
       gtag("js", new Date());
 
       gtag("config", "G-908G1CG0HH");
