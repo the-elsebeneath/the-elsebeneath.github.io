@@ -21,9 +21,23 @@ const { entry } = Astro.props;
 <EntryLayout entry={entry} />
 
 <script>
-  gtag("event", "story_discovered", {
-    story_title: document.title,
-    referrer: document.referrer,
-    event_category: "engagement",
+  document.addEventListener("DOMContentLoaded", function () {
+    const storyLinks = document.querySelectorAll(
+      'a[href*="junothreadborne.me"]'
+    );
+
+    storyLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        const storyTitle = document.querySelector("h1").textContent.trim();
+
+        dataLayer.push({
+          event: "story_click",
+          story_title: storyTitle,
+          source_page: window.location.pathname,
+          destination: this.href,
+          event_category: "engagement",
+        });
+      });
+    });
   });
 </script>
