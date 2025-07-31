@@ -6,7 +6,7 @@ title: The Village of Voicekeepers
 description: A quiet boy struggles with skill development.
 image: "@assets/books/village-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
-readLink: https://junothreadborne.me/village
+readLink: https://junothreadborne.me/story/village
 ---
 
 **The Village of Voicekeepers**

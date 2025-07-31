@@ -6,7 +6,7 @@ title: The Mountain of Mastery
 description: A quiet boy struggles with skill development.
 image: "@assets/books/mountain-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
-readLink: https://junothreadborne.me/mountain
+readLink: https://junothreadborne.me/story/mountain
 ---
 
 **The Mountain of Mastery**

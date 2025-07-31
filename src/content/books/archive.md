@@ -6,7 +6,7 @@ title: The Archive of Unsaid Things
 description: A quiet boy finds himself in a library where forgotten thoughts gather like dust, waiting to be remembered.
 image: "@assets/books/archive-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.'
-readLink: https://junothreadborne.me/archive
+readLink: https://junothreadborne.me/story/archive
 ---
 
 **The Archive of Unsaid Things**
