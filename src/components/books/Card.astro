@@ -1,20 +1,35 @@
 ---
 import { Image } from "astro:assets";
 import type { BooksEntry } from "@/types"; // Rename to BookEntry when you're ready
-
 interface Props {
   entry: BooksEntry;
 }
-
 const { entry } = Astro.props;
 const { title, image, imageAlt, author, description } = entry.data;
+
+// Helper function to create tracking-friendly slug from title
+function createTrackingId(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "") // Remove special chars
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
+}
 ---
 
 <div
   class="h-full m-2 bg-gradient-to-br gradient rounded-lg intersect:animate-fadeUp opacity-0"
 >
   <div class="glass h-full rounded-lg overflow-hidden shadow-md">
-    <a class="group block hover:opacity-100" href={`/books/${entry.id}`}>
+    <a
+      class="group block hover:opacity-100"
+      href={`/books/${entry.id}`}
+      data-track-category="book-click"
+      data-track-id={createTrackingId(title)}
+      data-track-label={title}
+      data-track-author={author}
+      data-track-book-id={entry.id}
+    >
       <div class="relative aspect-[2/3] overflow-hidden">
         {
           image && (
