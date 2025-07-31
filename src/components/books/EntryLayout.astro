@@ -56,12 +56,6 @@ const { Content } = await render(entry);
                           <a
                             target="_blank"
                             href={entry.data.readLink}
-                            onclick={`gtag('event', 'story_click', {
-                                story_title: '${title.replace(/'/g, "\\'")}',
-                                source_page: window.location.pathname,
-                                destination: '${entry.data.readLink}',
-                                event_category: 'engagement'
-                              });`}
                             class="inline-block rounded-lg bg-accent px-4 py-2 text-white font-semibold shadow hover:bg-accent/80 transition"
                           >
                             Read the Full Story →
