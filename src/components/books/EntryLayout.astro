@@ -4,15 +4,21 @@ import Share from "@components/common/Share.astro";
 import { Image } from "astro:assets";
 import BaseLayout from "@components/base/BaseLayout.astro";
 import { render } from "astro:content";
-
 interface Props {
   entry: BooksEntry;
 }
-
 const { entry } = Astro.props;
 const { title, image, imageAlt, author, description } = entry.data;
-
 const { Content } = await render(entry);
+
+// Helper function to create tracking-friendly slug from title
+function createTrackingId(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "") // Remove special chars
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
+}
 ---
 
 <BaseLayout title={title} description={description} image={image?.src}>
@@ -57,6 +63,12 @@ const { Content } = await render(entry);
                             target="_blank"
                             href={entry.data.readLink}
                             class="inline-block rounded-lg bg-accent px-4 py-2 text-white font-semibold shadow hover:bg-accent/80 transition"
+                            data-track-category="read-full-story"
+                            data-track-id={createTrackingId(title)}
+                            data-track-label={title}
+                            data-track-author={author}
+                            data-track-book-id={entry.id}
+                            data-track-destination={entry.data.readLink}
                           >
                             Read the Full Story →
                           </a>
