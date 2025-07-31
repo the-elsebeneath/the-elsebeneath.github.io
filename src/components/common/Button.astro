@@ -60,6 +60,7 @@ const trackingAttrs = {
   <div class=`
     ${color ? color : "bg-bg-t dark:bg-darkmode-bg-t"}
     ${type == "primary" ? "p-0.5 rounded-md" : "p-[1.5px] rounded-sm"}`
+        {...trackingAttrs}
   >
     <div class=`bg-bg-p dark:bg-darkmode-bg-p
       ${type == "primary" ? "px-4 py-2 rounded-md" : "px-2 py-0.5 rounded-sm"}
@@ -69,7 +70,6 @@ const trackingAttrs = {
         ${color ? color : "bg-bg-t dark:bg-darkmode-bg-t"}
         ${type == "primary" ? "font-bold" : ""}
         ${hoverInvert ? "group-hover:text-txt-p dark:group-hover:text-darkmode-txt-p" : ""}`
-    {...trackingAttrs}
       >
         {label}
       </div>
