@@ -44,7 +44,7 @@ function createTrackingId(label: string): string {
           <p set:html={markdownify(content)} class="mb-8" />
           {
             entry.data.buttons && entry.data.buttons.length && (
-              <div class="flex flex-wrap justify-center gap-4">
+              <div class="flex flex-wrap justify-center gap-4 pointer-events-none">
                 {entry.data.buttons.map((btn, index) => (
                   <Button
                     label={btn.label}
