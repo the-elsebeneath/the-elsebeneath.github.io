@@ -37,14 +37,31 @@ const baseUrl = "https://elsebeneath.online";
         window.dataLayer.push(arguments);
       }
 
-      // ALWAYS set consent to denied first, regardless of saved preferences
-      gtag("consent", "default", {
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        analytics_storage: "denied",
-        wait_for_update: 500,
-      });
+      // Check for existing consent preference
+      let savedConsent = null;
+      try {
+        savedConsent = localStorage.getItem("cookie_consent");
+      } catch (e) {
+        console.log("localStorage not available");
+      }
+
+      // Set default consent state based on saved preference or deny all
+      if (savedConsent === "yes") {
+        gtag("consent", "default", {
+          ad_storage: "granted",
+          ad_user_data: "granted",
+          ad_personalization: "granted",
+          analytics_storage: "granted",
+        });
+      } else {
+        gtag("consent", "default", {
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          analytics_storage: "denied",
+          wait_for_update: 500,
+        });
+      }
     </script>
 
     <!-- Microsoft Clarity - Now consent-aware -->
