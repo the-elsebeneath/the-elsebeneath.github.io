@@ -3,14 +3,6 @@ import type { BooksEntry } from "@/types";
 import Share from "@components/common/Share.astro";
 import { Image } from "astro:assets";
 import BaseLayout from "@components/base/BaseLayout.astro";
-import { upperHumanize, markdownify, slugify } from "@lib/textConverter";
-
-import {
-  FaRegClock,
-  FaRegUserCircle,
-  FaUtensils,
-  FaSeedling,
-} from "react-icons/fa";
 import { render } from "astro:content";
 
 interface Props {
@@ -64,6 +56,12 @@ const { Content } = await render(entry);
                           <a
                             target="_blank"
                             href={entry.data.readLink}
+                            onclick={`gtag('event', 'story_click', {
+                                story_title: '${title.replace(/'/g, "\\'")}',
+                                source_page: window.location.pathname,
+                                destination: '${entry.data.readLink}',
+                                event_category: 'engagement'
+                              });`}
                             class="inline-block rounded-lg bg-accent px-4 py-2 text-white font-semibold shadow hover:bg-accent/80 transition"
                           >
                             Read the Full Story →
