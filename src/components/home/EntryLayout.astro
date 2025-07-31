@@ -4,13 +4,20 @@ import { markdownify } from "@lib/textConverter";
 import Button from "@components/common/Button.astro";
 import type { HomeEntry } from "@/types";
 import { Image } from "astro:assets";
-
 interface Props {
   entry: HomeEntry;
 }
-
 const { entry } = Astro.props;
 const { image, imageAlt, title, content } = entry.data;
+
+// Helper function to create tracking-friendly slug from button label
+function createTrackingId(label: string): string {
+  return label
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "") // Remove special chars
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
+}
 ---
 
 <BaseLayout>
@@ -38,12 +45,16 @@ const { image, imageAlt, title, content } = entry.data;
           {
             entry.data.buttons && entry.data.buttons.length && (
               <div class="flex flex-wrap justify-center gap-4">
-                {entry.data.buttons.map((btn) => (
+                {entry.data.buttons.map((btn, index) => (
                   <Button
                     label={btn.label}
                     link={btn.link}
                     hoverInvert
                     color=""
+                    data-track-id={createTrackingId(btn.label)}
+                    data-track-label={btn.label}
+                    data-track-position={index + 1}
+                    data-track-category="homepage-cta"
                   />
                 ))}
               </div>

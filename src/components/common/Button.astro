@@ -7,16 +7,42 @@ interface Props {
   color?: string;
   hoverInvert?: boolean;
   glass?: boolean;
+  // Add tracking attributes
+  'data-track-id'?: string;
+  'data-track-label'?: string;
+  'data-track-position'?: number;
+  'data-track-category'?: string;
 }
 
-const { label, link, newtab=false, type="primary", color, hoverInvert=false, glass=true }: Props = Astro.props;
+const {
+  label,
+  link,
+  newtab=false,
+  type="primary",
+  color,
+  hoverInvert=false,
+  glass=true,
+  'data-track-id': trackId,
+  'data-track-label': trackLabel,
+  'data-track-position': trackPosition,
+  'data-track-category': trackCategory,
+}: Props = Astro.props;
+
+// Build tracking attributes object
+const trackingAttrs = {
+  ...(trackId && { 'data-track-id': trackId }),
+  ...(trackLabel && { 'data-track-label': trackLabel }),
+  ...(trackPosition && { 'data-track-position': trackPosition }),
+  ...(trackCategory && { 'data-track-category': trackCategory }),
+};
 ---
 
 { glass ? (
-  <a 
-    href={link} 
+  <a
+    href={link}
     target=`${newtab ? "_blank" : ""}`
     class=`no-underline inline-block hover:opacity-100 ${type == "primary" ? "" : "intersect:animate-fade opacity-0"}`
+    {...trackingAttrs}
   >
     <div class=`glass-t hover:bg-opacity-20 hover:backdrop-blur-none
       ${type == "primary" ? "px-4 py-2 rounded-md font-bold intersect:animate-fade opacity-0" : "px-2 py-0.5 rounded-sm text-txt-light dark:text-darkmode-txt-light"}`
@@ -25,10 +51,11 @@ const { label, link, newtab=false, type="primary", color, hoverInvert=false, gla
     </div>
   </a>
 ) : (
-  <a 
-    href={link} 
+  <a
+    href={link}
     target=`${newtab ? "_blank" : ""}`
     class=`no-underline inline-block group intersect:animate-fadeLeft opacity-0 ${hoverInvert ? "hover:opacity-100" : ""}`
+    {...trackingAttrs}
   >
   <div class=`
     ${color ? color : "bg-bg-t dark:bg-darkmode-bg-t"}
