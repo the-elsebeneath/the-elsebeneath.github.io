@@ -276,7 +276,7 @@ const baseUrl = "https://elsebeneath.online";
       }
 
       // Show banner only if no saved consent
-      const savedConsent = localStorage.getItem("cookie_consent");
+      const savedConsent = localStorage.getItem("cookie_consent") === "yes";
       if (!savedConsent) {
         banner.style.display = "block";
       }
