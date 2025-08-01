@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bridge</title>
+  </head>
+  <body>
+    <script>
+      window.addEventListener("message", (event) => {
+        if (event.origin !== "https://elsebeneath.online") return; // security
+        if (event.data.type === "BADGE_UNLOCKED") {
+          localStorage.setItem(event.data.badge, "true");
+          // throwConfetti();
+          // showBadge(event.data.badge);
+        }
+      });
+    </script>
+  </body>
+</html>
