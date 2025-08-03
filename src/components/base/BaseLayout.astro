@@ -64,6 +64,12 @@ const baseUrl = "https://elsebeneath.online";
       }
     </script>
 
+    <!-- Content Security Policy - Must be early but after consent setup -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://cloudflareinsights.com https://static.cloudflareinsights.com https://cdn.jsdelivr.net https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.clarity.ms https://cloudflareinsights.com https://www.googletagmanager.com https://stats.g.doubleclick.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; frame-src https://www.googletagmanager.com;"
+    />
+
     <!-- Microsoft Clarity - Now consent-aware -->
     <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
