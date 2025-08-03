@@ -18,7 +18,6 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
   },
-  adapter: cloudflare(),
   integrations: [
     react(),
     sitemap(),
@@ -59,5 +58,26 @@ export default defineConfig({
       },
     },
     extendDefaultPlugins: true,
+  },
+  adapter: cloudflare(),
+  server: {
+    headers: {
+      "Content-Security-Policy": `
+        default-src 'self';
+        script-src 'self' 'unsafe-inline'
+          https://www.googletagmanager.com
+          https://www.clarity.ms
+          https://cloudflareinsights.com
+          https://static.cloudflareinsights.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https:;
+        connect-src 'self'
+          https://www.google-analytics.com
+          https://analytics.google.com
+          https://www.clarity.ms;
+      `
+        .replace(/\s+/g, " ")
+        .trim(),
+    },
   },
 });
