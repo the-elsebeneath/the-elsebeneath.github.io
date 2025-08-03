@@ -52,5 +52,4 @@ export default defineConfig({
     },
     extendDefaultPlugins: true,
   },
-  // Remove server.headers - this won't work with static GitHub Pages deployment
 });
