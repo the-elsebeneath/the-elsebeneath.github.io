@@ -12,7 +12,10 @@ At first, it was just a few bedtime stories for my son—Sam—told in the quiet
 But then the stories kept coming.  
 And the Elsebeneath... answered back.<br/><br/>
 
+
 ---
+
+<br/>
 
 I’m Juno Threadborne—though that’s a name I stitched together for the stories, not the one on my license. I’m a writer, software architect, and dad of five curious, brilliant kids. I’ve spent most of my life building things: systems, stories, scaffolds for imagination.<br/><br/>
 
@@ -29,9 +32,12 @@ For the parts of us that still need wonder.<br/>
 Still need reassurance.<br/>
 Still need someone to say, “You’re doing okay.”<br/><br/>
 
+
 ---
 
-### 🤖 So... was this written by AI?
+<br/>
+
+### 🤖 So... was this written by AI?<br/><br/>
 
 Sort of. But not the way you might think.<br/><br/>
 
@@ -44,9 +50,12 @@ I guided the narratives, rewrote every line that didn’t sing, and held the emo
 This is not "AI slop."<br/>
 This is something else entirely.<br/><br/>
 
+
 ---
 
-### 🧵 Why release it for free?
+<br/>
+
+### 🧵 Why release it for free?<br/><br/>
 
 Because the Elsebeneath was never meant to be a product.<br/>
 
@@ -59,7 +68,9 @@ And because I believe storytelling, like care, shouldn’t come with a price tag
 
 ---
 
-### 📚 What is this site?
+<br/>
+
+### 📚 What is this site?<br/><br/>
 
 This is an experiment:<br/>
 Can we make stories that feel _real_—resonant, lyrical, thoughtful—by weaving human emotion and machine possibility together?<br/><br/>
@@ -73,6 +84,7 @@ That’s what this site is here to explore.<br/><br/>
 
 ---
 
+<br/>
 Whether you're reading with your kids or just looking for something gentle at the end of a long day—  
 There’s space here for you too.<br/><br/>
 
@@ -84,5 +96,7 @@ There’s a place for them here.<br/><br/>
 Juno<br/><br/>
 
 ---
+
+<br/>
 
 #### ☕ If you like what you see and would like to support my work, feel free to <a class="underline link" href="https://thrd.me/tip">buy me a coffee.</a>
