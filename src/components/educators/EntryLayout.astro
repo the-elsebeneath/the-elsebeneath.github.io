@@ -213,10 +213,20 @@ const { title, guideImage, heroImage, description } = entry.data;
             <div
               class="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg h-48 flex items-center justify-center mb-4"
             >
-              <p class="text-4xl">📖</p>
+              <Image
+                src={guideImage!}
+                alt="Educator's Guide Cover"
+                class="max-h-48 object-cover rounded-lg"
+              />
             </div>
-            <h4 class="h5 mb-2">Complete Educator's Guide</h4>
-            <p class="text-sm text-muted">6-page comprehensive resource</p>
+            <div class="intersect:animate-fadeUp opacity-0 intersect-delay-200">
+              <a
+                href="ht"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mr-4 mb-4"
+              >
+                Download Now
+              </a>
+            </div>
           </div>
         </div>
 
@@ -237,51 +247,6 @@ const { title, guideImage, heroImage, description } = entry.data;
               <li>Writing workshop extensions</li>
               <li>Art integration ideas</li>
             </ul>
-          </div>
-
-          <div
-            class="glass rounded-lg p-6 intersect:animate-fadeUp opacity-0 intersect-delay-200"
-          >
-            <form class="space-y-4">
-              <input
-                type="hidden"
-                name="form-name"
-                value="educator-guide-download"
-              />
-              <div>
-                <label for="role" class="block text-sm font-medium mb-2"
-                  >Your Role</label
-                >
-                <select id="role" name="role" class="form-input w-full">
-                  <option value="">Select your role</option>
-                  <option value="teacher">Classroom Teacher</option>
-                  <option value="librarian">School Librarian</option>
-                  <option value="counselor">School Counselor</option>
-                  <option value="administrator">Administrator</option>
-                  <option value="parent">Parent/Homeschool</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="grade-level" class="block text-sm font-medium mb-2"
-                  >Grade Level (optional)</label
-                >
-                <input
-                  type="text"
-                  id="grade-level"
-                  name="grade-level"
-                  placeholder="e.g. 3rd-5th"
-                  class="form-input w-full"
-                />
-              </div>
-              <a
-                href="https://thrd.me/guide"
-                type="submit"
-                class="btn btn-primary w-full"
-              >
-                Download Free Guide
-              </a>
-            </form>
           </div>
         </div>
       </div>
@@ -391,7 +356,7 @@ const { title, guideImage, heroImage, description } = entry.data;
   </section>
 
   <!-- Testimonials/Reviews Section -->
-  <section class="section">
+  <!-- <section class="section">
     <div class="container">
       <div class="row justify-center">
         <div class="lg:col-10 text-center mb-12">
@@ -403,24 +368,19 @@ const { title, guideImage, heroImage, description } = entry.data;
 
       <div class="row justify-center">
         <div class="lg:col-8">
-          <!-- Add actual testimonials when you have them -->
-          <div
-            class="glass rounded-lg p-8 text-center mb-8 intersect:animate-fadeUp opacity-0"
-          >
-            <blockquote class="text-lg mb-4">
-              "These stories gave my students permission to struggle with
-              learning—and celebrate their progress along the way. The
-              discussions we've had about 'almost' have transformed our
-              classroom culture."
-            </blockquote>
-            <cite class="text-sm text-muted"
-              >- Elementary Teacher (Coming Soon)</cite
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div
+    class="glass rounded-lg p-8 text-center mb-8 intersect:animate-fadeUp opacity-0"
+  >
+    <blockquote class="text-lg mb-4">
+      "These stories gave my students permission to struggle with learning—and
+      celebrate their progress along the way. The discussions we've had about
+      'almost' have transformed our classroom culture."
+    </blockquote>
+    <cite class="text-sm text-muted">- Elementary Teacher (Coming Soon)</cite>
+  </div>
+</BaseLayout>
+
+ -->
 
   <!-- Call to Action -->
   <section class="section bg-primary text-white">
@@ -437,14 +397,11 @@ const { title, guideImage, heroImage, description } = entry.data;
             resilient, creative learners.
           </p>
           <div class="intersect:animate-fadeUp opacity-0 intersect-delay-200">
-            <a href="#guide-download" class="btn btn-white mr-4 mb-4">
-              Download Free Guide
-            </a>
             <a
-              href="mailto:hello@yourdomain.com"
-              class="btn btn-outline-white mb-4"
+              href="ht"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mr-4 mb-4"
             >
-              Schedule a Virtual Visit
+              Download Free Guide
             </a>
           </div>
         </div>
