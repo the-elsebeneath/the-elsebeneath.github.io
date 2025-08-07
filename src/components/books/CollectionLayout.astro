@@ -20,7 +20,21 @@ const { entryIndex, entries, pageIndex, pageCount }: Props = Astro.props;
   image={entryIndex.data.image?.src}
   description={entryIndex.data.description}
 >
-  <PageHeader title={entryIndex.data.title} />
+  <section class="flex justify-center">
+    <div class="container text-center m-2">
+      <div class="rounded-lg p-0 bg-gradient-to-t gradient">
+        <div
+          class="rounded-lg glass px-8 py-6 intersect:animate-fadeDown opacity-0 intersect-no-queue"
+        >
+          <h1 set:text={"The Elsebeneath Series"} />
+          <p>
+            A set of adventures in the <em>Elsebeneath</em>, a whimsical world
+            of becoming.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="section m-2">
     <div class="container">
       <div class="flex flex-wrap justify-center">
