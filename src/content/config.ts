@@ -153,6 +153,20 @@ const books = defineCollection({
     }),
 });
 
+const educators = defineCollection({
+  loader: glob({
+    pattern: "**\/[^_]*.{md,mdx}",
+    base: "./src/content/educators",
+  }),
+  schema: ({ image }) =>
+    searchable.extend({
+      title: z.string(),
+      description: z.string().optional(),
+      guideImage: image().optional(),
+      heroImage: z.string().default(""),
+    }),
+});
+
 const terms = defineCollection({
   loader: glob({ pattern: "-index.{md,mdx}", base: "./src/content/terms" }),
   schema: searchable,
@@ -170,4 +184,5 @@ export const collections = {
   portfolio,
   books,
   terms,
+  educators,
 };

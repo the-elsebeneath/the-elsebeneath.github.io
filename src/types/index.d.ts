@@ -13,6 +13,7 @@ export type PoetryEntry = CollectionEntry<"poetry">;
 export type PortfolioEntry = CollectionEntry<"portfolio">;
 export type BooksEntry = CollectionEntry<"books">;
 export type TermsEntry = CollectionEntry<"terms">;
+export type EducatorEntry = CollectionEntry<"educators">;
 
 export type SearchableEntry =
   | AboutEntry
@@ -22,6 +23,7 @@ export type SearchableEntry =
   | PoetryEntry
   | PortfolioEntry
   | BooksEntry
+  | EducatorEntry
   | TermsEntry;
 
 export type SocialLinks = {

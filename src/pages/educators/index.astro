@@ -1,0 +1,9 @@
+---
+import type { EducatorEntry } from "@/types";
+import EntryLayout from "@components/educators/EntryLayout.astro";
+import { getIndex } from "@lib/contentParser";
+
+const entry = (await getIndex("educators")) as EducatorEntry;
+---
+
+<EntryLayout entry={entry} />
