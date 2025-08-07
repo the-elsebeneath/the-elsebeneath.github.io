@@ -46,11 +46,12 @@ const { title, guideImage, heroImage, description } = entry.data;
             <div
               class="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg h-64 flex items-center justify-center mb-4"
             >
-              <p class="text-6xl">📚</p>
+              <Image
+                src={heroImage!}
+                alt="Educator's Guide Cover"
+                class="max-h-11/12 object-cover rounded-lg"
+              />
             </div>
-            <p class="text-sm text-muted">
-              Ages 8-12 • Social-Emotional Learning • Growth Mindset
-            </p>
           </div>
         </div>
       </div>

@@ -163,7 +163,7 @@ const educators = defineCollection({
       title: z.string(),
       description: z.string().optional(),
       guideImage: image().optional(),
-      heroImage: z.string().default(""),
+      heroImage: image().optional(),
     }),
 });
 
