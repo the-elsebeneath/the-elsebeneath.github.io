@@ -7,6 +7,7 @@ description: A quiet boy finds himself in a library where forgotten thoughts gat
 image: "@assets/books/elsewhere-cover.png"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://junothreadborne.me/story/elsewhere
+hidden: true
 ---
 
 *Book 6 of The Elsebeneath series*

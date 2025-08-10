@@ -150,6 +150,7 @@ const books = defineCollection({
       imageAlt: z.string().default(""),
       author: reference("authors").optional(),
       readLink: z.string().url().optional(),
+      hidden: z.boolean().default(false),
     }),
 });
 
