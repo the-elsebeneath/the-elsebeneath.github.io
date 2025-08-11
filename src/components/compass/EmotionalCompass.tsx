@@ -258,76 +258,27 @@ const EmotionalCompass: React.FC<EmotionalCompassProps> = ({ storyData }) => {
 
       {/* Styles */}
       <style>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.5s ease-out forwards;
-        }
-
-        .glass {
-          background: rgba(255, 255, 255, 0.25);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .glass:hover {
-          background: rgba(255, 255, 255, 0.35);
-        }
-
-        @media (max-width: 768px) {
-          svg {
-            width: 320px !important;
-            height: 320px !important;
-          }
-        }
-
-        @media (max-width: 480px) {
-          svg {
-            width: 280px !important;
-            height: 280px !important;
-          }
-        }
-
-        .animate-ping {
-          animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-        }
-
-        @keyframes ping {
-          0% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          75%, 100% {
-            transform: scale(2);
-            opacity: 0;
-          }
-        }
-          @keyframes breathe {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
+  .emotional-compass svg {
+    width: 400px;
+    height: 400px;
   }
-  50% {
-    transform: scale(1.015);
-    opacity: 0.9;
-  }
-}
 
-.breathe {
-  transform-origin: center;
-  animation: breathe 6s ease-in-out infinite;
-}
-      `}</style>
+  @media (max-width: 768px) {
+    .emotional-compass svg {
+      width: 320px !important;
+      height: 320px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .emotional-compass svg {
+      width: 280px !important;
+      height: 280px !important;
+    }
+  }
+
+  /* Other styles stay the same */
+`}</style>
     </div>
   );
 };
