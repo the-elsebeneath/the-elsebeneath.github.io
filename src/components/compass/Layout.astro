@@ -1,0 +1,276 @@
+---
+import BaseLayout from "@components/base/BaseLayout.astro";
+import EmotionalCompass from "@components/compass/EmotionalCompass";
+
+// SEO and social meta
+const title = "The Emotional Compass";
+const description =
+  "Let your feelings guide you to the stories that speak to your heart in the Elsebeneath.";
+const image = "/images/emotional-compass-preview.jpg"; // You'll want to create this
+
+const { entry } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} image={image}>
+  <!-- React Component Integration -->
+  <EmotionalCompass storyData={entry} client:load />
+</BaseLayout>
+
+<style>
+  /* Additional styles to ensure seamless integration with your design system */
+
+  /* Intersection observer animations from your existing pattern */
+  .intersect\:animate-fadeUp {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .intersect\:animate-fadeUp.intersect {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .intersect-delay-100 {
+    transition-delay: 100ms;
+  }
+
+  .intersect-delay-200 {
+    transition-delay: 200ms;
+  }
+
+  .intersect-delay-300 {
+    transition-delay: 300ms;
+  }
+
+  /* Ensure the component matches your section spacing */
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-sm {
+    padding: 3rem 0;
+  }
+
+  /* Make sure container and row classes work properly */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.75rem;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .lg\:col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    padding: 0 0.75rem;
+  }
+
+  .lg\:col-10 {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    padding: 0 0.75rem;
+  }
+
+  .md\:col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 0.75rem;
+  }
+
+  /* Responsive breakpoints */
+  @media (max-width: 1024px) {
+    .lg\:col-8,
+    .lg\:col-10 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .md\:col-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section-sm {
+      padding: 2rem 0;
+    }
+  }
+
+  /* Typography classes matching your system */
+  .h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  .text-primary {
+    color: var(--color-primary, #8b5a2b);
+  }
+
+  .text-muted {
+    color: var(--color-text-muted, #6b7280);
+  }
+
+  /* Button styles matching your system */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .btn-outline {
+    background: transparent;
+    border-color: var(--color-primary, #8b5a2b);
+    color: var(--color-primary, #8b5a2b);
+  }
+
+  .btn-outline:hover {
+    background: var(--color-primary, #8b5a2b);
+    color: white;
+  }
+
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  /* Background themes */
+  .bg-theme-light {
+    background: linear-gradient(
+      135deg,
+      rgba(139, 90, 43, 0.05) 0%,
+      rgba(168, 85, 247, 0.05) 100%
+    );
+  }
+
+  /* Glass morphism effect matching your design */
+  .glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Spacing utilities */
+  .mb-3 {
+    margin-bottom: 0.75rem;
+  }
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+  .mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .p-6 {
+    padding: 1.5rem;
+  }
+  .p-8 {
+    padding: 2rem;
+  }
+
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  /* Height utilities */
+  .h-full {
+    height: 100%;
+  }
+
+  /* Text size utilities */
+  .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  /* Hover effects */
+  .hover\:shadow-lg:hover {
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .hover\:-translate-y-1:hover {
+    transform: translateY(-0.25rem);
+  }
+
+  /* CSS custom properties for your color system */
+  :root {
+    --color-primary: #8b5a2b;
+    --color-secondary: #a855f7;
+    --color-text-muted: #6b7280;
+  }
+</style>
+
+<script>
+  // Initialize intersection observer for animations
+  // This matches the pattern from your EntryLayout.astro
+  document.addEventListener("DOMContentLoaded", function () {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("intersect");
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with intersection animation classes
+    document.querySelectorAll('[class*="intersect:animate-"]').forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>

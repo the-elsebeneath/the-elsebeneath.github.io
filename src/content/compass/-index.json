@@ -1,0 +1,98 @@
+{
+  "north": [
+    {
+      "title": "A Kitten Named Kippen",
+      "description": "The moment you realize a smile can slip—and it matters that someone notices.",
+      "slug": "kippen"
+    },
+    {
+      "title": "The Village of Voicekeepers – Chapter 3",
+      "description": "Where Sam learns that listening is a way of belonging.",
+      "slug": "village#chapter-3"
+    }
+  ],
+  "northeast": [
+    {
+      "title": "The Island of Almosts – The Painter Who Erased the World",
+      "description": "Inky's story of unmaking reveals how perfection can steal the joy of creating.",
+      "slug": "island#chapter-five"
+    },
+    {
+      "title": "The Valley of Yet-Stills – Chapter 2",
+      "description": "Stillness isn't failure—it's the space before growth.",
+      "slug": "valley#chapter-2"
+    }
+  ],
+  "east": [
+    {
+      "title": "The Archive of Unsaid Things – Prologue",
+      "description": "A grieving builder finds solace in silence and memory.",
+      "slug": "archive#prologue"
+    },
+    {
+      "title": "The Village of Voicekeepers – Chapter 5: The Ribbon Tree",
+      "description": "How names carry echoes—and how we hold on through remembrance.",
+      "slug": "village#chapter-5"
+    }
+  ],
+  "southeast": [
+    {
+      "title": "Elsewhere, Briefly – Chapter 6: The Game of Miscommunication",
+      "description": "A spoon, a translator, and a meaning lost in translation.",
+      "slug": "elsewhere-briefly#chapter-6"
+    },
+    {
+      "title": "The Village of Voicekeepers – Chapter 8: The Echo House",
+      "description": "Words ripple back in unexpected ways.",
+      "slug": "village#chapter-8"
+    }
+  ],
+  "south": [
+    {
+      "title": "The Island of Almosts – The Snail Who Raced a Cheetah",
+      "description": "Zoomie reminds us the race is only ever with who we were yesterday.",
+      "slug": "island#chapter-four"
+    },
+    {
+      "title": "The Valley of Yet-Stills – Chapter 4",
+      "description": "Even the paused heart is still alive.",
+      "slug": "valley#chapter-4"
+    }
+  ],
+  "southwest": [
+    {
+      "title": "A Kitten Named Kippen – Final Passage",
+      "description": "When you believe someone's love for you is real, and that's enough.",
+      "slug": "kippen#final-passage"
+    },
+    {
+      "title": "The Mountain of Mastery – Chapter 10",
+      "description": "A slow, earned reminder that presence is proof of care.",
+      "slug": "mountain#chapter-10"
+    }
+  ],
+  "west": [
+    {
+      "title": "Elsewhere, Briefly – Chapter 7: The Man with No Shoes",
+      "description": "A spoon questions its identity—and its job description.",
+      "slug": "elsewhere#chapter-7"
+    },
+    {
+      "title": "The Archive of Unsaid Things – Chapter 13",
+      "description": "What happens when even your name starts to fade?",
+      "slug": "archive#chapter-13"
+    }
+  ],
+  "northwest": [
+    {
+      "title": "The Archive of Unsaid Things – Chapter 10: The Broken Chime",
+      "description": "A voice stilled. A truth whispered. A healing begun.",
+      "slug": "archive#chapter-10"
+    },
+    {
+      "title": "Elsewhere, Briefly – Chapter 5: The Mirror of Incorrect Memory",
+      "description": "A reflection rewritten and a chance to let go.",
+      "slug": "elsewhere#chapter-5"
+    }
+  ]
+}

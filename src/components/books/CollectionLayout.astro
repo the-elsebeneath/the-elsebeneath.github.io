@@ -2,17 +2,26 @@
 import BaseLayout from "@components/base/BaseLayout.astro";
 import BookCard from "@components/books/Card.astro"; // Rename if you like
 import Pagination from "@components/common/Pagination.astro";
-import PageHeader from "@components/common/PageHeader.astro";
 import type { BooksEntry } from "@/types";
+import EmotionalCompass, {
+  type Story,
+} from "@components/compass/EmotionalCompass";
 
 interface Props {
   entryIndex: BooksEntry;
   entries: BooksEntry[];
+  storyRecommendations: Record<string, Story[]>;
   pageIndex: number;
   pageCount: number;
 }
 
-const { entryIndex, entries, pageIndex, pageCount }: Props = Astro.props;
+const {
+  entryIndex,
+  entries,
+  storyRecommendations,
+  pageIndex,
+  pageCount,
+}: Props = Astro.props;
 ---
 
 <BaseLayout
@@ -53,6 +62,9 @@ const { entryIndex, entries, pageIndex, pageCount }: Props = Astro.props;
         pageIndex={pageIndex}
         pageCount={pageCount}
       />
+      <div>
+        <EmotionalCompass storyData={storyRecommendations} client:load />
+      </div>
     </div>
   </section>
 </BaseLayout>

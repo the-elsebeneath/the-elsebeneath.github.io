@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 4
 id: kippen
 slug: kippen
 title: A Kitten Named Kippen

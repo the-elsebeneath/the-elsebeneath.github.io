@@ -168,6 +168,23 @@ const educators = defineCollection({
     }),
 });
 
+const compass = defineCollection({
+  loader: glob({
+    pattern: "**/*.json",
+    base: "./src/content/compass",
+  }),
+  schema: z.record(
+    z.string(),
+    z.array(
+      z.object({
+        title: z.string(),
+        description: z.string(),
+        slug: z.string(),
+      }),
+    ),
+  ),
+});
+
 const terms = defineCollection({
   loader: glob({ pattern: "-index.{md,mdx}", base: "./src/content/terms" }),
   schema: searchable,
@@ -186,4 +203,5 @@ export const collections = {
   books,
   terms,
   educators,
+  compass,
 };

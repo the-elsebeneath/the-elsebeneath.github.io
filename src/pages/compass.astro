@@ -1,0 +1,9 @@
+---
+import CompassLayout from "@components/compass/Layout.astro";
+import { getIndex } from "@lib/contentParser";
+import type { CompassEntry } from "@/types";
+
+const entry = (await getIndex("compass")) as CompassEntry;
+---
+
+<CompassLayout entry={entry} />

@@ -2,9 +2,10 @@
 import CollectionLayout from "@components/books/CollectionLayout.astro";
 import { getIndex, getEntries } from "@lib/contentParser";
 import { sortByOrder } from "@lib/sortFunctions";
-import type { BooksEntry } from "@/types";
+import type { BooksEntry, CompassEntry } from "@/types";
 
 const entryIndex = (await getIndex("books")) as BooksEntry;
+const compassData = (await getIndex("compass")) as CompassEntry;
 const entries = (await getEntries("books", sortByOrder)) as BooksEntry[];
 
 const { slug } = Astro.params;
@@ -22,4 +23,5 @@ const currentEntries = entries.slice(indexOfFirstEntry, indexOfLastEntry);
   entries={currentEntries}
   pageIndex={currentPageIndex}
   pageCount={pageCount}
+  storyRecommendations={compassData.data}
 />
