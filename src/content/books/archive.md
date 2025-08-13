@@ -7,7 +7,7 @@ description: A quiet boy finds himself in a library where forgotten thoughts gat
 image: "@assets/books/archive-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.'
 readLink: https://junothreadborne.me/story/archive
-hidden: true
+hidden: false
 ---
 
 *Book 5 of The Elsebeneath series*
