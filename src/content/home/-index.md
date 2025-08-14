@@ -13,5 +13,5 @@ buttons:
   - label: I'm a Grown-Up
     link: /about
   - label: I'm Just Curious
-    link: /books
+    link: /books/kippen
 ---
