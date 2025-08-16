@@ -6,6 +6,9 @@ import type { BooksEntry } from "@/types";
 import EmotionalCompass, {
   type Story,
 } from "@components/compass/EmotionalCompass";
+import { Image } from "astro:assets";
+import { render } from "astro:content";
+import { markdownify } from "@lib/textConverter";
 
 interface Props {
   entryIndex: BooksEntry;
@@ -13,6 +16,7 @@ interface Props {
   storyRecommendations: Record<string, Story[]>;
   pageIndex: number;
   pageCount: number;
+  featuredEntry?: BooksEntry; // Optional featured book
 }
 
 const {
@@ -21,7 +25,24 @@ const {
   storyRecommendations,
   pageIndex,
   pageCount,
+  featuredEntry,
 }: Props = Astro.props;
+
+// Helper function to create tracking-friendly slug from title
+function createTrackingId(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "") // Remove special chars
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
+}
+
+// Render featured entry content if it exists
+let FeaturedContent;
+if (featuredEntry) {
+  const rendered = await render(featuredEntry);
+  FeaturedContent = rendered.Content;
+}
 ---
 
 <BaseLayout
@@ -44,8 +65,90 @@ const {
       </div>
     </div>
   </section>
+
+  <!-- Featured Work Section -->
+  {
+  featuredEntry && (
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-txt-p dark:text-darkmode-txt-p intersect:animate-fade opacity-0">
+            Featured Work
+          </h2>
+        </div>
+        <div class="row justify-center">
+          <article class="lg:col-10">
+            <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
+              <div class="flex flex-wrap md:flex-nowrap items-start gap-6">
+                <!-- Image Container -->
+                <div class="w-full md:w-1/3 flex-shrink-0">
+                  <div class="aspect-[3/4] overflow-hidden rounded-lg">
+                    <Image
+                      class="w-full h-full object-cover"
+                      src={featuredEntry.data.image ?? ""}
+                      alt={featuredEntry.data.imageAlt || featuredEntry.data.title}
+                      width={400}
+                      height={533}
+                      loading="eager"
+                    />
+                  </div>
+                </div>
+
+                <!-- Content Container -->
+                <div class="w-full md:w-2/3 flex flex-col justify-between min-h-[200px]">
+                  <div>
+                    <h3 class="text-2xl font-bold mb-3 text-txt-p dark:text-darkmode-txt-p">
+                      {featuredEntry.data.title}
+                    </h3>
+                    {featuredEntry.data.author && (
+                      <p class="text-sm text-txt-s dark:text-darkmode-txt-s mb-3 italic">
+                        by {featuredEntry.data.author}
+                      </p>
+                    )}
+                    <div class="prose prose-sm max-w-none text-txt-s dark:text-darkmode-txt-s line-clamp-4">
+                      <FeaturedContent />
+                    </div>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div class="flex flex-wrap gap-3 mt-6">
+                    {featuredEntry.data.readLink && (
+                      <a
+                        href={featuredEntry.data.readLink}
+                        target="_blank"
+                        class="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-white font-medium shadow hover:bg-accent/80 transition-colors"
+                        data-track-category="read-full-story"
+                        data-track-id={createTrackingId(featuredEntry.data.title)}
+                        data-track-label={featuredEntry.data.title}
+                      >
+                        Read Story
+                        <span class="text-lg">→</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+  <!-- All Books Section -->
   <section class="section m-2">
     <div class="container">
+      {
+        featuredEntry && (
+          <div class="text-center mb-8">
+            <h2 class="text-2xl font-bold text-txt-p dark:text-darkmode-txt-p intersect:animate-fade opacity-0">
+              All Stories
+            </h2>
+          </div>
+        )
+      }
+
       <div class="flex flex-wrap justify-center">
         {
           entries

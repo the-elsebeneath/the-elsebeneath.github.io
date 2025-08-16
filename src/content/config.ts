@@ -151,6 +151,7 @@ const books = defineCollection({
       author: reference("authors").optional(),
       readLink: z.string().url().optional(),
       hidden: z.boolean().default(false),
+      featured: z.boolean().default(false),
     }),
 });
 

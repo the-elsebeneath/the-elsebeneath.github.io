@@ -7,6 +7,7 @@ description: A ribbon. A memory. A stage that remembers.
 image: "@assets/books/theater-cover.png"
 imageAlt: Three actors stand on stage beneath an arch as a young boy and a gecko look on.
 readLink: https://junothreadborne.me/story/theater
+featured: true
 ---
 
 _An Elsebeneath Story_

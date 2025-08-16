@@ -16,6 +16,7 @@ const pageCount = Math.ceil(entries.length / entriesPerPage);
 const indexOfLastEntry = currentPageIndex * entriesPerPage;
 const indexOfFirstEntry = indexOfLastEntry - entriesPerPage;
 const currentEntries = entries.slice(indexOfFirstEntry, indexOfLastEntry);
+const featuredBook = entries.find((entry) => entry.data.featured) || entries[0];
 ---
 
 <CollectionLayout
@@ -24,4 +25,5 @@ const currentEntries = entries.slice(indexOfFirstEntry, indexOfLastEntry);
   pageIndex={currentPageIndex}
   pageCount={pageCount}
   storyRecommendations={compassData.data}
+  featuredEntry={featuredBook}
 />
