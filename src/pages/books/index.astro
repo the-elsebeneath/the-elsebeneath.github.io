@@ -10,7 +10,7 @@ const entries = (await getEntries("books", sortByOrder)) as BooksEntry[];
 
 const { slug } = Astro.params;
 
-const entriesPerPage = 8;
+const entriesPerPage = 6;
 const currentPageIndex = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
 const pageCount = Math.ceil(entries.length / entriesPerPage);
 const indexOfLastEntry = currentPageIndex * entriesPerPage;
