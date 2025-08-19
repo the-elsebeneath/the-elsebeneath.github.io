@@ -32,7 +32,7 @@ function createTrackingId(title: string): string {
             class="block pointer-events-auto md:pointer-events-none"
           >
             <Image
-              class="absolute object-cover w-full h-full transition-transform duration-300 group-hover:scale-[105%]"
+              class="absolute object-cover w-full h-full transition-transform duration-300 group-hover:scale-[105%] group-[.expanded]:scale-[105%]"
               src={image}
               alt={imageAlt ?? title}
               width={500}
@@ -42,27 +42,56 @@ function createTrackingId(title: string): string {
           </a>
         )
       }
-
-      <!-- Top Info Overlay - starts small, expands on hover -->
+      <!-- Top Info Overlay - starts small, expands on hover/tap -->
       <div
-        class="absolute top-0 w-full bg-black/60 backdrop-blur-sm text-white transition-all duration-300 ease-out group-hover:bg-black/80 group-hover:h-full flex flex-col"
+        class="absolute top-0 w-full bg-black/60 backdrop-blur-sm text-white transition-all duration-300 ease-out group-hover:bg-black/80 group-hover:h-full group-[.expanded]:bg-black/80 group-[.expanded]:h-full flex flex-col"
       >
-        <!-- Default State: Just Title (always visible) -->
-        <div class="p-3 group-hover:hidden">
-          <h3 class="text-lg font-semibold text-white truncate">
-            {title}
-          </h3>
+        <!-- Default State: Just Title (always visible when not expanded) -->
+        <div
+          class="p-3 group-hover:hidden group-[.expanded]:hidden cursor-pointer md:cursor-default"
+          onclick="toggleOverlay(this)"
+        >
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-white truncate flex-1">
+              {title}
+            </h3>
+            <!-- Expand arrow - only visible on mobile -->
+            <svg
+              class="w-5 h-5 text-white/70 ml-2 transition-transform duration-200 md:hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+          {author && <p class="text-sm italic opacity-80 mt-1">by {author}</p>}
+          <!-- Subtle hint for mobile users -->
+          <p class="text-xs text-white/60 mt-1 md:hidden">Tap for details</p>
         </div>
+        <!-- Expanded State: Full Content (visible on hover or when expanded class added) -->
+        <div
+          class="hidden group-hover:flex group-[.expanded]:flex flex-col h-full p-4"
+        >
+          <!-- Close button for mobile -->
+          <button
+            class="md:hidden self-end text-white/60 hover:text-white text-lg mb-2"
+            onclick="toggleOverlay(this)"
+            aria-label="Close details"
+          >
+            ✕
+          </button>
 
-        <!-- Expanded State: Full Content (visible on hover) -->
-        <div class="hidden group-hover:flex flex-col h-full p-4">
           <div class="space-y-3 flex-1">
             <h3 class="text-lg font-semibold text-white">
               {title}
             </h3>
-
             {author && <p class="text-sm italic opacity-80">by {author}</p>}
-
             {
               readingLevel?.guide && (
                 <div>
@@ -70,7 +99,6 @@ function createTrackingId(title: string): string {
                     emojiString={readingLevel.guide}
                     client:load
                   />
-
                   {readingLevel.description && (
                     <p class="text-xs text-yellow-100 leading-relaxed border-t border-white/20 pt-2 mt-2">
                       {readingLevel.description}
@@ -80,7 +108,6 @@ function createTrackingId(title: string): string {
               )
             }
           </div>
-
           <!-- Read Now Button -->
           <div class="mt-4 pt-3 border-t border-white/20">
             <a
@@ -100,3 +127,13 @@ function createTrackingId(title: string): string {
     </div>
   </div>
 </div>
+
+<script>
+  function toggleOverlay(element) {
+    // Find the parent card container
+    const card = element.closest(".group");
+    if (card) {
+      card.classList.toggle("expanded");
+    }
+  }
+</script>
