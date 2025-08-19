@@ -7,6 +7,9 @@ description: A quiet boy struggles with skill development.
 image: "@assets/books/mountain-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://junothreadborne.me/story/mountain
+readingLevel:
+  description: A bit more conceptual. Teaches complex emotional lessons with simple language. Last of the “early reader trilogy.”
+  guide: 🐥🌀🗝️
 ---
 
 *Book 3 of The Elsebeneath series*

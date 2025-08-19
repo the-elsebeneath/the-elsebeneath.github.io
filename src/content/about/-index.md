@@ -1,17 +1,32 @@
 ---
-title: Hey, I'm Juno Threadborne.
-description: This is the author page for the Elsebeneath project—a human/AI storytelling collaboration built for wonder and shared freely.
-image: "@assets/profile/badge.jpg"
+title: What is the Elsebeneath?
+description: The Elsebeneath is a world built for the in-between. A story universe of small tales, big feelings, and gentle magic—for readers who never stopped wondering.
+image: "@assets/art/logo.webp"
 draft: false
 ---
 
-I never meant to build a whole world.<br/><br/>
+The Elsebeneath is a hidden layer of the world.  
+A place made of almosts, not-yets, and unspoken thoughts.  
+Where stories go when they’re not finished,  
+and feelings wait until you’re quiet enough to feel them.
 
-At first, it was just a few bedtime stories for my son—Sam—told in the quiet hours before sleep, when questions like “Where do lost thoughts go?” feel bigger than the room.<br/><br/>
+It’s not quite fantasy. Not just a fable.  
+It’s something else—  
+**a world built for the in-between.**
 
-But then the stories kept coming.  
-And the Elsebeneath... answered back.<br/><br/>
+We call it *liminal fiction*:  
+small stories with big feelings,  
+crafted for readers who never stopped wondering.
 
+If you’ve ever felt like you don’t quite fit—  
+too old for kid’s books, too tired for grownup ones—  
+there’s a place for you here.
+
+Welcome to the Elsebeneath.  
+You’re not lost.  
+You’re just between.
+
+<br/><br/>
 
 ---
 
@@ -32,7 +47,6 @@ For the parts of us that still need wonder.<br/>
 Still need reassurance.<br/>
 Still need someone to say, “You’re doing okay.”<br/><br/>
 
-
 ---
 
 <br/>
@@ -49,7 +63,6 @@ I guided the narratives, rewrote every line that didn’t sing, and held the emo
 
 This is not "AI slop."<br/>
 This is something else entirely.<br/><br/>
-
 
 ---
 

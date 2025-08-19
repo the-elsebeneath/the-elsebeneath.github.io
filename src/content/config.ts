@@ -152,6 +152,12 @@ const books = defineCollection({
       readLink: z.string().url().optional(),
       hidden: z.boolean().default(false),
       featured: z.boolean().default(false),
+      readingLevel: z
+        .object({
+          description: z.string().optional(),
+          guide: z.string().optional(),
+        })
+        .optional(),
     }),
 });
 

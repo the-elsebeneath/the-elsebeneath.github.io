@@ -7,6 +7,9 @@ description: A quiet boy struggles with skill development.
 image: "@assets/books/valley-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://junothreadborne.me/story/valley
+readingLevel:
+  description: Still early-reader friendly, but deeper. Good solo read or bedtime. Ideal for kids navigating effort, perfectionism, or failure.
+  guide: 🐥💫🧶
 ---
 
 _Book 2 of The Elsebeneath series_

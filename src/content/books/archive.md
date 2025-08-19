@@ -9,6 +9,9 @@ imageAlt: An ancient library built into the side of a cliff, glowing with soft l
 readLink: https://junothreadborne.me/story/archive
 hidden: false
 featured: true
+readingLevel:
+  description: A turning point. Requires emotional maturity to resonate fully. Best for readers 10+ or adults.
+  guide: 🕊️💔🪞
 ---
 
 *Book 5 of The Elsebeneath series*

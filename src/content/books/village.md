@@ -7,6 +7,9 @@ description: A quiet boy struggles with skill development.
 image: "@assets/books/village-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://junothreadborne.me/story/village
+readingLevel:
+  description: A shift upward. More layered phrasing and emotional stakes. Identity and voice as core themes.
+  guide: 🐦🧶🎭
 ---
 
 _Book 4 of The Elsebeneath series_

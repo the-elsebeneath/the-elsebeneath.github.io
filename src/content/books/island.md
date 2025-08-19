@@ -7,6 +7,9 @@ description: A quiet boy struggles with skill development.
 image: "@assets/books/island-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://junothreadborne.me/story/island
+readingLevel:
+  description: Simple prose, perfect for young readers or classroom storytime. Gently introduces Elsebeneath logic.
+  guide: 🐥💫🧶
 ---
 
 _Book 1 of The Elsebeneath series_

@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import type { BooksEntry } from "@/types"; // Rename to BookEntry when you're ready
+import ReadingLevelGuide from "@components/common/ReadingLevelGuide";
 interface Props {
   entry: BooksEntry;
 }
 const { entry } = Astro.props;
-const { title, image, imageAlt, author, description } = entry.data;
+const { title, image, imageAlt, author, readingLevel } = entry.data;
 // Helper function to create tracking-friendly slug from title
 function createTrackingId(title: string): string {
   return title
@@ -19,38 +20,83 @@ function createTrackingId(title: string): string {
 <div
   class="h-full m-2 bg-gradient-to-br gradient rounded-lg intersect:animate-fadeUp opacity-0"
 >
-  <div class="glass h-full rounded-lg overflow-hidden shadow-md">
-    <a
-      class="group block hover:opacity-100"
-      href={`/books/${entry.id}`}
-      data-track-category="book-click"
-      data-track-id={createTrackingId(title)}
-      data-track-label={title}
-      data-track-author={author}
-      data-track-book-id={entry.id}
-    >
-      <div class="relative aspect-[2/3] overflow-hidden pointer-events-none">
-        {
-          image && (
+  <div
+    class="glass h-full rounded-lg overflow-y-auto overflow-x-hidden shadow-md group"
+  >
+    <div class="relative aspect-[2/3] overflow-y-auto overflow-x-hidden">
+      <!-- Background Image -->
+      {
+        image && (
+          <a
+            href={`/books/${entry.id}`}
+            class="block pointer-events-auto md:pointer-events-none"
+          >
             <Image
-              class="absolute object-cover w-full h-full transition-transform duration-300 group-hover:scale-[105%] pointer-events-none"
+              class="absolute object-cover w-full h-full transition-transform duration-300 group-hover:scale-[105%]"
               src={image}
               alt={imageAlt ?? title}
               width={500}
               height={750}
               loading="lazy"
             />
-          )
-        }
-        <div
-          class="absolute bottom-0 w-full bg-black/60 backdrop-blur-sm p-3 text-white pointer-events-none"
-        >
-          <h3 class="text-lg font-semibold text-white">
+          </a>
+        )
+      }
+
+      <!-- Top Info Overlay - starts small, expands on hover -->
+      <div
+        class="absolute top-0 w-full bg-black/60 backdrop-blur-sm text-white transition-all duration-300 ease-out group-hover:bg-black/80 group-hover:h-full flex flex-col"
+      >
+        <!-- Default State: Just Title (always visible) -->
+        <div class="p-3 group-hover:hidden">
+          <h3 class="text-lg font-semibold text-white truncate">
             {title}
           </h3>
-          {author && <p class="text-sm italic opacity-80">by {author}</p>}
+        </div>
+
+        <!-- Expanded State: Full Content (visible on hover) -->
+        <div class="hidden group-hover:flex flex-col h-full p-4">
+          <div class="space-y-3 flex-1">
+            <h3 class="text-lg font-semibold text-white">
+              {title}
+            </h3>
+
+            {author && <p class="text-sm italic opacity-80">by {author}</p>}
+
+            {
+              readingLevel?.guide && (
+                <div>
+                  <ReadingLevelGuide
+                    emojiString={readingLevel.guide}
+                    client:load
+                  />
+
+                  {readingLevel.description && (
+                    <p class="text-xs text-yellow-100 leading-relaxed border-t border-white/20 pt-2 mt-2">
+                      {readingLevel.description}
+                    </p>
+                  )}
+                </div>
+              )
+            }
+          </div>
+
+          <!-- Read Now Button -->
+          <div class="mt-4 pt-3 border-t border-white/20">
+            <a
+              href={`/books/${entry.id}`}
+              class="block w-full bg-accent hover:bg-accent/80 text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors duration-200"
+              data-track-category="book-click"
+              data-track-id={createTrackingId(title)}
+              data-track-label={title}
+              data-track-author={author}
+              data-track-book-id={entry.id}
+            >
+              Read Now →
+            </a>
+          </div>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </div>

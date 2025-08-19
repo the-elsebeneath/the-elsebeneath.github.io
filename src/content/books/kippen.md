@@ -7,6 +7,9 @@ description: A kitten's adventure.
 image: "@assets/books/kippen-cover.png"
 imageAlt: An orange kitten with a vest and hat stands on a table proudly.
 readLink: https://junothreadborne.me/story/kippen
+readingLevel:
+  description: Simple surface, rich core. Accessible to kids, but made for older readers who understand shame, self-worth, and kindness.
+  guide: 🕊️🎭🧶
 ---
 
 _An Elsebeneath Interlude_

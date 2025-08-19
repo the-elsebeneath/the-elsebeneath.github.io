@@ -1,0 +1,317 @@
+---
+import BaseLayout from "@components/base/BaseLayout.astro";
+import { markdownify } from "@lib/textConverter";
+import { Image } from "astro:assets";
+
+const title = "Reading Guide";
+const description =
+  "Understanding the Elsebeneath's gentle system of emojis—a way to find the right story for the right moment.";
+const image = "@assets/art/reading-guide.webp"; // You can add an image if you have one
+---
+
+<BaseLayout title={title} description={description} image={image?.src}>
+  <section class="section-sm">
+    <div class="container">
+      <div class="row justify-center">
+        <div
+          class="glass rounded-lg text-center text-xl p-8 md:col-10 lg:col-8 intersect:animate-fadeUp opacity-0 intersect-no-queue"
+        >
+          <h2 class="h3 mb-6">🌱 The Elsebeneath Reading Guide</h2>
+
+          <div class="prose prose-lg mx-auto text-left space-y-8">
+            <div class="text-center mb-8">
+              <p class="text-lg text-txt-s dark:text-darkmode-txt-s italic">
+                A gentle system to help you find the right story<br />
+                 for the right heart, at the right moment.
+              </p>
+            </div>
+
+            <!-- Reading Levels Section -->
+            <div class="space-y-6">
+              <h3
+                class="text-2xl font-bold text-center text-txt-p dark:text-darkmode-txt-p"
+              >
+                📖 Reading Levels
+              </h3>
+
+              <div class="space-y-4">
+                <div class="glass rounded-lg p-4 flex items-start gap-4">
+                  <span class="text-3xl">🐣</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Very Early Reader (K–2)
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Simple sentences and gentle rhythms. Perfect for
+                      read-alouds where little ones can follow along, absorbing
+                      the story's heartbeat even if they can't read every word
+                      yet.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-4">
+                  <span class="text-3xl">🐥</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Early Reader (2–3)
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      For newly independent readers taking their first brave
+                      steps into longer stories. Minimal complex vocabulary, but
+                      rich with feeling and wonder.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-4">
+                  <span class="text-3xl">🐦</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Mid Reader (3–5)
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Richer vocabulary and subtle emotional cues. Stories that
+                      trust young readers to understand nuance and sit with
+                      bigger feelings.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-4">
+                  <span class="text-3xl">🕊️</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Grown-With-You (5+)
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Stories with emotional nuance that speak to both children
+                      and the adults reading with them. These are the books that
+                      make bedtime meaningful for everyone.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-4">
+                  <span class="text-3xl">🐉</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Advanced/Adult
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Emotionally complex with layered meaning and poetic
+                      structure. For readers who want depth, metaphor, and
+                      stories that linger.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="border-txt-s/20 dark:border-darkmode-txt-s/20" />
+
+            <!-- Emotional Themes Section -->
+            <div class="space-y-6">
+              <h3
+                class="text-2xl font-bold text-center text-txt-p dark:text-darkmode-txt-p"
+              >
+                💭 Emotional Themes
+              </h3>
+
+              <p class="text-center text-txt-s dark:text-darkmode-txt-s italic">
+                Because sometimes you need a story that matches your heart.
+              </p>
+
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="glass rounded-lg p-4 flex items-start gap-3">
+                  <span class="text-2xl">💫</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Wonder
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      For moments when the world feels magical and full of
+                      possibility.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-3">
+                  <span class="text-2xl">💔</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Grief
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Gentle companions for loss, sadness, and the tender work
+                      of healing.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-3">
+                  <span class="text-2xl">🎭</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Identity
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Stories about becoming, belonging, and figuring out who
+                      you are.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-3">
+                  <span class="text-2xl">🌀</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Growth
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      For times of change, challenge, and learning to be brave.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-3">
+                  <span class="text-2xl">🧶</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Connection
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      About friendship, family, and the threads that bind us
+                      together.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-3">
+                  <span class="text-2xl">🪞</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Introspection
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Quiet stories for reflection, self-discovery, and inner
+                      wisdom.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-3">
+                  <span class="text-2xl">🌬️</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Lightness
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Gentle joy, playfulness, and moments of pure delight.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="glass rounded-lg p-4 flex items-start gap-3">
+                  <span class="text-2xl">🗝️</span>
+                  <div>
+                    <h4
+                      class="font-semibold text-txt-p dark:text-darkmode-txt-p"
+                    >
+                      Discovery
+                    </h4>
+                    <p class="text-sm text-txt-s dark:text-darkmode-txt-s">
+                      Adventures of exploration, learning, and finding hidden
+                      treasures.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="border-txt-s/20 dark:border-darkmode-txt-s/20" />
+
+            <!-- How It Works Section -->
+            <div class="space-y-4">
+              <h3
+                class="text-2xl font-bold text-center text-txt-p dark:text-darkmode-txt-p"
+              >
+                🧭 How It Works
+              </h3>
+
+              <div class="glass rounded-lg p-6 space-y-4">
+                <p class="text-txt-s dark:text-darkmode-txt-s">
+                  Each story combines <strong>one reading level</strong> with <strong
+                    >one or more emotional themes</strong
+                  >. So you might see:
+                </p>
+
+                <div class="space-y-3 text-center">
+                  <div class="inline-block bg-accent/10 rounded-lg p-3">
+                    <span class="text-2xl">🐦💫🌀</span>
+                    <p class="text-sm mt-2 text-txt-s dark:text-darkmode-txt-s">
+                      Mid reader · Wonder · Growth
+                    </p>
+                  </div>
+
+                  <div
+                    class="text-xs text-txt-s dark:text-darkmode-txt-s italic"
+                  >
+                    Perfect for a child ready for richer vocabulary who's
+                    curious about change and possibility.
+                  </div>
+                </div>
+
+                <p class="text-txt-s dark:text-darkmode-txt-s">
+                  This way, you can find stories that match not just reading
+                  ability, but also the emotional space you're in right now.
+                </p>
+              </div>
+            </div>
+
+            <!-- Footer Note -->
+            <div class="text-center pt-6">
+              <p class="text-txt-s dark:text-darkmode-txt-s italic">
+                Remember: these are gentle guides, not rigid rules.<br />
+                 The best story is always the one that speaks to your heart.
+              </p>
+
+              <div class="mt-6">
+                <a
+                  href="/books"
+                  class="inline-block bg-accent hover:bg-accent/80 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                >
+                  Browse Stories →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

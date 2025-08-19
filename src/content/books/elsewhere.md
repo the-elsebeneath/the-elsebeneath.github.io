@@ -8,6 +8,9 @@ image: "@assets/books/elsewhere-cover.png"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
 readLink: https://junothreadborne.me/story/elsewhere
 hidden: false
+readingLevel:
+  description: Narratively bizarre, emotionally honest, and existentially silly. Fully embraces its surrealism and subtext. Grown-up energy cloaked in whimsy.
+  guide: 🐉🎭🌀
 ---
 
 *Book 6 of The Elsebeneath series*

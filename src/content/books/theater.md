@@ -8,6 +8,9 @@ image: "@assets/books/theater-cover.png"
 imageAlt: Three actors stand on stage beneath an arch as a young boy and a gecko look on.
 readLink: https://junothreadborne.me/story/theater
 featured: false
+readingLevel:
+  description: Written at a middle-school or high-school reading level (7th–10th grade), but emotionally sophisticated and layered. Contains long sentences, subtle dialogue shifts, and complex metaphor. Ideal for teens, grownups, and older kids who read well above grade level.
+  guide: 🎭📚
 ---
 
 _An Elsebeneath Story_
