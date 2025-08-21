@@ -10,6 +10,7 @@ readLink: https://junothreadborne.me/story/village
 readingLevel:
   description: A shift upward. More layered phrasing and emotional stakes. Identity and voice as core themes.
   guide: 🐦🧶🎭
+featured: true
 ---
 
 _Book 4 of The Elsebeneath series_

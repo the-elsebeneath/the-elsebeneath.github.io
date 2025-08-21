@@ -8,7 +8,7 @@ image: "@assets/books/archive-cover.webp"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.'
 readLink: https://junothreadborne.me/story/archive
 hidden: false
-featured: true
+featured: false
 readingLevel:
   description: A turning point. Requires emotional maturity to resonate fully. Best for readers 10+ or adults.
   guide: 🕊️💔🪞
