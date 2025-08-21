@@ -82,22 +82,6 @@ And because I believe storytelling, like care, shouldn’t come with a price tag
 ---
 
 <br/>
-
-### 📚 What is this site?<br/><br/>
-
-This is an experiment:<br/>
-Can we make stories that feel _real_—resonant, lyrical, thoughtful—by weaving human emotion and machine possibility together?<br/><br/>
-
-Can a story written partly by a model… still make you cry?<br/>
-Can it feel like _you were seen_?<br/>
-
-I think so.<br/>
-I hope so.<br/>
-That’s what this site is here to explore.<br/><br/>
-
----
-
-<br/>
 Whether you're reading with your kids or just looking for something gentle at the end of a long day—  
 There’s space here for you too.<br/><br/>
 
