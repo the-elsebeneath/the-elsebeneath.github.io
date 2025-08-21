@@ -245,7 +245,7 @@ const EmotionalCompass: React.FC<EmotionalCompassProps> = ({ storyData }) => {
                         href={`/books/${story.slug}`}
                         className="btn btn-outline btn-sm"
                       >
-                        Read now →
+                        Read More →
                       </a>
                     </div>
                   </div>
