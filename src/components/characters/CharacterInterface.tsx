@@ -171,7 +171,9 @@ const CharacterInterface: React.FC<CharacterInterfaceProps> = ({
 
               <p>
                 <em>
-                  The information below is not official Elsebeneath canon.
+                  🚧 This area is under construction. 🚧
+                  <br />
+                  The Information below is not official Elsebeneath canon.
                 </em>
               </p>
             </div>
