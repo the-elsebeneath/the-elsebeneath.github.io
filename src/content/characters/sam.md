@@ -1,6 +1,6 @@
 ---
 name: "Sam"
-portrait: "🌟"
+portrait: "https://junothreadborne.me/portraits/sam.png"
 origin: "The Keeper of Lost Things"
 description: "A gentle soul who finds meaning in the spaces between words and the weight of unspoken connections. Sam carries a notebook that writes itself with things people would've said, should've said, or meant to say."
 

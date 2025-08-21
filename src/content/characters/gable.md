@@ -1,7 +1,7 @@
 ---
 # Gable - The Guardian of Memory
 name: "Gable"
-portrait: "📚"
+portrait: "https://junothreadborne.me/portraits/gable.png"
 origin: "The Memory Keeper"
 description: "The tender of the Archive of Unsaid Things, a man who once wrote letters to his brother that were never answered, until they were. Gable guards the space where unspoken words wait to be understood, carrying his own grief like a careful flame."
 
