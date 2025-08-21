@@ -15,6 +15,7 @@ export type BooksEntry = CollectionEntry<"books">;
 export type TermsEntry = CollectionEntry<"terms">;
 export type EducatorEntry = CollectionEntry<"educators">;
 export type CompassEntry = CollectionEntry<"compass">;
+export type CharactersEntry = CollectionEntry<"characters">;
 
 export type SearchableEntry =
   | AboutEntry

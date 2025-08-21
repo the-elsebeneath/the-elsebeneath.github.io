@@ -1,0 +1,38 @@
+---
+// /src/pages/characters.astro
+import CharacterInterface from "@/components/characters/CharacterInterface";
+import { getEntries } from "@lib/contentParser";
+import type { CharactersEntry } from "@/types";
+import BaseLayout from "@components/base/CharactersLayout.astro";
+
+const characters = (await getEntries("characters")) as CharactersEntry[];
+const characterData = characters
+  .filter((char) => !char.data.hidden)
+  .map((char) => ({
+    id: char.id,
+    name: char.data.name,
+    portrait: char.data.portrait,
+    origin: char.data.origin,
+    strength: char.data.strength,
+    struggle: char.data.struggle,
+    companion: {
+      name: char.data.silentCompanion.name,
+      description: char.data.silentCompanion.description,
+      icon: char.data.silentCompanion.icon,
+    },
+    originMoment: char.data.originMoment,
+    whisperedTruth: char.data.whisperedTruth,
+    whatTaught: char.data.whatTheyTaught,
+    echoesLeft: char.data.echoesLeftBehind,
+    emotionalElement: char.data.emotionalElement,
+    backstory: char.data.backstory,
+  }));
+---
+
+<BaseLayout title="Character Archives">
+  <CharacterInterface
+    characters={characterData}
+    initialCharacterId="sam"
+    client:load
+  />
+</BaseLayout>

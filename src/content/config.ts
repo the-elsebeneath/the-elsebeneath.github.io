@@ -5,7 +5,7 @@ import { glob } from "astro/loaders";
 // When updating the set of searchable collections, update collectionList in /src/pages/search.astro
 
 const searchable = z.object({
-  title: z.string(),
+  title: z.string().optional(),
   description: z.string().optional(),
   autodescription: z.boolean().default(true),
   draft: z.boolean().default(false),
@@ -197,6 +197,146 @@ const terms = defineCollection({
   schema: searchable,
 });
 
+const characters = defineCollection({
+  loader: glob({
+    pattern: "**\/[^_]*.{md,mdx}",
+    base: "./src/content/characters",
+  }),
+  schema: ({ image }) =>
+    searchable.extend({
+      // Basic Character Info
+      order: z.number().optional(),
+      id: z.string().optional(),
+      slug: z.string().optional(),
+      name: z.string(),
+      description: z.string().optional(),
+
+      // Visual representation
+      portrait: z.string().default("✨"), // Emoji or character representation
+      portraitImage: image().optional(), // Optional actual image
+      portraitImageAlt: z.string().default(""),
+
+      // Core Character Identity
+      origin: z.string(), // "The Keeper of Lost Things"
+
+      // Essential Nature (Symbolic Inventory)
+      strength: z.string(), // "Quiet Resilience"
+      struggle: z.string(), // "Fear of Abandonment"
+
+      // Silent Companion Object
+      silentCompanion: z.object({
+        name: z.string(),
+        description: z.string(),
+        icon: z.string().optional().default("✨"),
+        // Optional: reference to a companions collection if you want separate companion entries
+        companionRef: reference("companions").optional(),
+      }),
+
+      // Emotional Archaeology Fields
+      originMoment: z.string(), // "Finding a letter never sent"
+      whisperedTruth: z.string(), // "I'm afraid of being forgotten"
+      whatTheyTaught: z.string(), // "That small gestures matter"
+      echoesLeftBehind: z.string(), // "Organized spaces, thoughtful notes"
+      emotionalElement: z.string(), // "Paper"
+
+      // Optional extended character info
+      backstory: z.string().optional(),
+      relationships: z
+        .array(
+          z.object({
+            characterRef: reference("characters"),
+            relationshipType: z.string(), // "friend", "mentor", "rival", etc.
+            description: z.string().optional(),
+          }),
+        )
+        .optional(),
+
+      // Story connections
+      appearsIn: z.array(reference("books")).optional(),
+      featuredIn: z.array(reference("books")).optional(),
+
+      // Character development over time
+      characterArc: z
+        .object({
+          startingPoint: z.string().optional(),
+          growthMoments: z.array(z.string()).optional(),
+          currentState: z.string().optional(),
+        })
+        .optional(),
+
+      // Administrative fields (following your books pattern)
+      author: reference("authors").optional(), // Creator of the character
+      hidden: z.boolean().default(false),
+      featured: z.boolean().default(false),
+
+      // Character-specific metadata
+      characterType: z
+        .enum([
+          "protagonist",
+          "deuteragonist",
+          "supporting",
+          "mentor",
+          "guide",
+          "catalyst",
+        ])
+        .optional(),
+      personalityArchetype: z.string().optional(), // "The Caregiver", "The Explorer", etc.
+
+      // Optional reading level if character appears in specific age-targeted stories
+      readingLevel: z
+        .object({
+          description: z.string().optional(),
+          guide: z.string().optional(),
+        })
+        .optional(),
+
+      // Links to external character resources
+      characterSheetLink: z.string().url().optional(),
+      inspirationSources: z.array(z.string()).optional(),
+    }),
+});
+
+// Optional: Separate companions collection if you want detailed companion entries
+const companions = defineCollection({
+  loader: glob({
+    pattern: "**\/[^_]*.{md,mdx}",
+    base: "./src/content/companions",
+  }),
+  schema: ({ image }) =>
+    searchable.extend({
+      order: z.number().optional(),
+      id: z.string().optional(),
+      slug: z.string().optional(),
+      name: z.string(),
+      description: z.string(),
+
+      // Visual representation
+      icon: z.string().default("✨"),
+      image: image().optional(),
+      imageAlt: z.string().default(""),
+
+      // Companion properties
+      companionType: z
+        .enum(["object", "spirit", "memory", "concept", "element"])
+        .optional(),
+      symbolicMeaning: z.string(),
+      originStory: z.string().optional(),
+      powers: z.array(z.string()).optional(),
+
+      // Which characters this companion is associated with
+      boundTo: z.array(reference("characters")),
+
+      // Story significance
+      appearsIn: z.array(reference("books")).optional(),
+      significantMoments: z.array(z.string()).optional(),
+
+      // Administrative
+      author: reference("authors").optional(),
+      hidden: z.boolean().default(false),
+      featured: z.boolean().default(false),
+    }),
+});
+
 // Export collections
 export const collections = {
   about,
@@ -211,4 +351,6 @@ export const collections = {
   terms,
   educators,
   compass,
+  characters,
+  companions,
 };
