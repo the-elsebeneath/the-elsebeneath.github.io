@@ -166,6 +166,15 @@ const CharacterInterface: React.FC<CharacterInterfaceProps> = ({
         {/* Main Content (removed the sidebar) */}
         <div className="flex-1 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-slate-100 p-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 min-h-screen">
+            <div className="lg:col-span-3 bg-slate-900/80 backdrop-blur-xl border border-slate-600/30 rounded-2xl p-6 relative overflow-hidden">
+              <div className="items-center text-center absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-blue-400/10 to-transparent animate-[sweep_3s_infinite]"></div>
+
+              <p>
+                <em>
+                  The information below is not official Elsebeneath canon.
+                </em>
+              </p>
+            </div>
             {/* Character Navigation */}
             <div className="lg:col-span-3 bg-slate-900/80 backdrop-blur-xl border border-slate-600/30 rounded-2xl p-6 relative overflow-hidden">
               <div className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-blue-400/10 to-transparent animate-[sweep_3s_infinite]"></div>
