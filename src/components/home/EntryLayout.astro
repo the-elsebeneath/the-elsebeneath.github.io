@@ -41,7 +41,18 @@ function createTrackingId(label: string): string {
             )
           }
           <h1 set:html={markdownify(title)} class="mb-4" />
-          <p set:html={markdownify(content)} class="mb-8" />
+          <p set:html={markdownify(content)} class="mb-8 text-xl" />
+          <hr />
+          <p class="mb-8 mt-8">
+            These are living drafts of lyrical fables. Best read slowly (or
+            aloud). I revise in public.
+          </p>
+          <p class="mb-8 mt-8">
+            If you prefer straighter prose, start with “<a
+              class="underline"
+              href="/books/kippen">Kippen</a
+            >” or “<a href="/books/village" class="underline">Village</a>.”
+          </p>
           {
             entry.data.buttons && entry.data.buttons.length && (
               <div class="flex flex-wrap justify-center gap-4">

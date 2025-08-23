@@ -7,8 +7,6 @@ content: |
 
   Some were written for my son.  
   All were written to be shared.
-
-  These are living drafts of lyrical fables. Best read slowly (or aloud). I revise in public. If you prefer straighter prose, start with “Kippen” or “Village.”
   
 buttons:
   - label: I'm a Kid
