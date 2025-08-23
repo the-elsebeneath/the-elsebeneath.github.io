@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 7
 id: elsewhere
 slug: elsewhere
 title: Elsewhere, Briefly

@@ -1,5 +1,5 @@
 ---
-order: 11
+order: 8
 id: brynn
 slug: brynn
 title: The Loaf That Wouldn't Listen
