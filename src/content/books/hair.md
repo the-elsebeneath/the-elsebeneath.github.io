@@ -11,6 +11,7 @@ hidden: false
 readingLevel:
   description: Emotionally layered but accessible. Best for middle schoolers and up—especially readers navigating first crushes, emotional intensity, and identity. Reads easily, but rewards re-reading. A heartfelt, funny, and awkwardly brave coming-of-age interlude with a depth beyond its whimsy.
   guide: 🕊️🎭🧶
+featured: true
 ---
 
 *A Said-So Academy Story*
