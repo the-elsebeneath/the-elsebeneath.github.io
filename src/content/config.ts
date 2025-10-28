@@ -1,5 +1,6 @@
 import { defineCollection, reference, z } from "astro:content";
 import { glob } from "astro/loaders";
+import { title } from "process";
 
 // May also need to update /src/types/index.d.ts when updating this file
 // When updating the set of searchable collections, update collectionList in /src/pages/search.astro
@@ -117,6 +118,21 @@ const poetry = defineCollection({
     }),
 });
 
+const story = defineCollection({
+  loader: glob({ pattern: "**\/[^_]*.{md,mdx}", base: "./src/content/story" }),
+  schema: ({ image }) =>
+    searchable.extend({
+      title: z.string(),
+      name: z.string(),
+      description: z.string(),
+      cover: image(),
+      coverAlt: z.string().default(""),
+      audio: z.string().url().optional(),
+      readingTime: z.string().optional(),
+      order: z.number(),
+    }),
+});
+
 const portfolio = defineCollection({
   loader: glob({
     pattern: "-index.{md,mdx}",
@@ -149,7 +165,7 @@ const books = defineCollection({
       image: image().optional(),
       imageAlt: z.string().default(""),
       author: reference("authors").optional(),
-      readLink: z.string().url().optional(),
+      readLink: z.string().optional(),
       hidden: z.boolean().default(false),
       featured: z.boolean().default(false),
       readingLevel: z
@@ -346,6 +362,7 @@ export const collections = {
   home,
   indexCards,
   poetry,
+  story,
   portfolio,
   books,
   terms,

@@ -6,7 +6,7 @@ title: A Hair Out of Place
 description: Fen's Crush
 image: "@assets/books/hair-cover.png"
 imageAlt: A pencil holding back a single defiant strand of hair in a gleaming school hallway.
-readLink: https://junothreadborne.me/story/hair
+readLink: /story/hair
 hidden: false
 readingLevel:
   description: Emotionally layered but accessible. Best for middle schoolers and up—especially readers navigating first crushes, emotional intensity, and identity. Reads easily, but rewards re-reading. A heartfelt, funny, and awkwardly brave coming-of-age interlude with a depth beyond its whimsy.

@@ -6,7 +6,7 @@ title: The Loaf That Wouldn't Listen
 description: For when nothing turns out right.
 image: "@assets/books/brynn-cover.png"
 imageAlt: A woman stands over a lopsided loaf of bread
-readLink: https://junothreadborne.me/story/brynn
+readLink: /story/brynn
 readingLevel:
   description: Easy to follow for early readers, likely around 2nd–3rd grade reading level. Vocabulary and structure are simple, but the themes resonate at any age—especially for perfectionists or recovering overachievers.
   guide: 🐣

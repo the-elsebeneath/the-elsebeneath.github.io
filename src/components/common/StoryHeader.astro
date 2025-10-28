@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import type { StoryEntry } from "@/types";
+
+interface Props {
+  entry: StoryEntry;
+}
+
+const { entry }: Props = Astro.props;
+
+const { title, cover, coverAlt } = entry.data;
+---
+
+<div class="mt-2">
+  {
+    cover && (
+      <div class="mb-8 glass rounded-lg intersect:animate-fadeDown opacity-0 intersect-no-queue">
+        <Image
+          class="w-full rounded-lg"
+          src={cover}
+          alt={coverAlt || `Cover image for ${title}`}
+          height={500}
+          width={1200}
+          loading="eager"
+        />
+      </div>
+    )
+  }
+</div>

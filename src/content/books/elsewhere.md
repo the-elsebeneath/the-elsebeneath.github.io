@@ -6,7 +6,7 @@ title: Elsewhere, Briefly
 description: A quiet boy finds himself in a library where forgotten thoughts gather like dust, waiting to be remembered.
 image: "@assets/books/elsewhere-cover.png"
 imageAlt: An ancient library built into the side of a cliff, glowing with soft lantern light.
-readLink: https://junothreadborne.me/story/elsewhere
+readLink: /story/elsewhere
 hidden: false
 readingLevel:
   description: Narratively bizarre, emotionally honest, and existentially silly. Fully embraces its surrealism and subtext. Grown-up energy cloaked in whimsy.
