@@ -13,9 +13,10 @@ export interface Props {
   description?: string | null;
   image?: string;
   noindex?: boolean;
+  canonical?: string;
 }
 
-const { title, description, image, noindex } = Astro.props;
+const { title, description, image, noindex, canonical } = Astro.props;
 
 const siteTitle = "The Elsebeneath";
 const siteDescription = "The Elsebeneath";
