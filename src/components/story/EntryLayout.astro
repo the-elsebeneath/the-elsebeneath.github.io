@@ -24,16 +24,9 @@ const descriptionLength = 200;
 const entryDescription =
   description ||
   (autodescription ? plainify(entry.body!.slice(0, descriptionLength)) : null);
-
-const canonicalUrl = `https://junothreadborne.me/story/${entry.id}`;
 ---
 
-<BaseLayout
-  title={title}
-  description={entryDescription}
-  image={cover?.src}
-  canonical={canonicalUrl}
->
+<BaseLayout title={title} description={entryDescription} image={cover?.src}>
   <section class="flex container justify-center my-8">
     <div class="col md:col-8">
       <article class="">
