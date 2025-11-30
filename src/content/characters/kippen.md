@@ -1,7 +1,7 @@
 ---
 
 name: "Kippen"  
-portrait: "https://junothreadborne.me/portraits/kippen.png"
+portrait: "/portraits/kippen.png"
 origin: "The Village of Voicekeepers"  
 description: "A dirt-dappled kitten in a tilted cap and vest, Kippen lives as though the world were built to adore him. Compliments are his daily bread, and he beams as if joy were muscle memory. But when a single chime catches a deeper truth, he must learn that worth isn’t stitched in whiskers or hats—it’s found in being loved as himself."
 

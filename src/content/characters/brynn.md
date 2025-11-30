@@ -3,7 +3,7 @@
 # Brynn – The Keeper of Quiet Truths
 
 name: "Brynn"  
-portrait: "https://junothreadborne.me/portraits/brynn.png"
+portrait: "/portraits/brynn.png"
 origin: "The Voicekeepers"  
 description: "A baker in the Village of Voicekeepers, Brynn listens more than she speaks. Her loaves carry whispers of forgotten words, and her chimes angle truths into the air. Born from silence when her mother stopped speaking, Brynn turned absence into nourishment—kneading what’s unsaid into bread warm enough to carry forward."
 

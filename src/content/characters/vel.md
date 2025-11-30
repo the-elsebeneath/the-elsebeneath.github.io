@@ -1,7 +1,7 @@
 ---
 # Vel
 name: "Vel"
-portrait: "https://junothreadborne.me/portraits/vel.png"
+portrait: "/portraits/vel.png"
 origin: "The Dreaming Navigator"
 description: "Once called Vel, she has reclaimed her full name and her history as another name, a muu—a mourner-dancer from ancient times who translated grief into movement and ritual. She gave away pieces of herself to help others, including her own name, until she learned that some gifts are too heavy to keep forever."
 

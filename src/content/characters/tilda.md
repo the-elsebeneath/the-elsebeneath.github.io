@@ -3,7 +3,7 @@
 # Tilda – The Keeper of Start-Overs
 
 name: "Tilda"  
-portrait: "https://junothreadborne.me/portraits/tilda.png"
+portrait: "/portraits/tilda.png"
 origin: "The Mountain of Mastery"  
 description: "Guardian of the Shrine of the Start-Overs, Tilda collects half-finished things with reverence rather than pity. Draped in seven layers of pouches and goggles that magnify her gaze, she treats every abandoned attempt as evidence of courage. Where others see failure, she sees music waiting to hum when the light shifts."
 

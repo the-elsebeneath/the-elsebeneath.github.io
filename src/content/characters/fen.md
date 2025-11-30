@@ -3,7 +3,7 @@
 # Fen – The Jester of Elsewhere
 
 name: "Fen"  
-portrait: "https://junothreadborne.me/portraits/fen.png"
+portrait: "/portraits/fen.png"
 origin: "The Valley of Yet-Stills"  
 description: "A boy in a too-large coat, hopping from stone to stone as if the world itself were a stage. Fen greets newcomers like old friends, folding them into plays only he seems to know the script for. Beneath his flourishes and mock salutes, though, lingers a quiet ache: he’s not sure if the performance ends when the audience leaves."
 

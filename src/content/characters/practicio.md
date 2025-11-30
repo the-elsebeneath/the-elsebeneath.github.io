@@ -1,6 +1,6 @@
 ---
 name: "Practicio"
-portrait: "https://junothreadborne.me/portraits/practicio.png"
+portrait: "/portraits/practicio.png"
 origin: "The Devoted Apprentice"
 description: "A wise turtle who moves like the world will wait if he needs it to. Practicio wears glasses with one cracked lens, a hat made of moss, and carries the weight of understanding that growth takes time. He guides visitors through the Island of Almosts, helping them see that 'not done yet' is different from 'not good enough.'"
 
