@@ -242,7 +242,7 @@ const EmotionalCompass: React.FC<EmotionalCompassProps> = ({ storyData }) => {
                         {story.description}
                       </p>
                       <a
-                        href={`https://junothreadborne.me/story/${story.slug}`}
+                        href={`/story/${story.slug}`}
                         className="btn btn-outline btn-sm"
                       >
                         Read More →

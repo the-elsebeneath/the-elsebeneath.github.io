@@ -15,6 +15,12 @@ order: 0
 
 by Juno Threadborne
 
+---
+
+[Download the PDF here](https://docs.thrd.me/elsebeneath/The%20Island%20of%20Almosts.pdf)
+
+---
+
 # Chapter One: The Tangle
 
 Sam stood in the driveway, holding his yo-yo like it was mocking him.

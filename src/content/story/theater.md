@@ -14,6 +14,12 @@ _An Elsebeneath Story_
 
 by Juno Threadborne
 
+---
+
+[Download the PDF here](https://docs.thrd.me/elsebeneath/How%20It%20Didn't%20Happen.pdf)
+
+---
+
 # Chapter 1: *The Amphibio’théatre*
 
 Sam hadn’t meant to stay long.

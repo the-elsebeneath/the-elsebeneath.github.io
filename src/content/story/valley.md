@@ -12,6 +12,12 @@ order: 1
 
 by Juno Threadborne
 
+---
+
+[Download the PDF here](https://docs.thrd.me/elsebeneath/The%20Valley%20of%20Yet-Stills.pdf)
+
+---
+
 *Book 2 of The Elsebeneath series*
 
 # Chapter One: The Trick That Wouldn't Land

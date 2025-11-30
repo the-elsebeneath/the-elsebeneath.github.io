@@ -16,6 +16,11 @@ by Juno Threadborne
 
 ---
 
+[Download the PDF here](https://docs.thrd.me/elsebeneath/A%20Kitten%20Named%20Kippen.pdf)
+
+
+---
+
 Kippen woke the way he always did—like someone who had never once worried the world might not adore him. There was no one in the house to tell him otherwise. There hadn’t been for quite some time, though the scarf on the doorknob still seemed to remember someone else’s name.
 
 He tugged on his favorite sweater vest (buttoned one too high, as usual) and his green plaid cap tilted slightly left, as always. His dirt-dappled fur was a mix that couldn’t decide if it was orange or gray.

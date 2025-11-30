@@ -12,6 +12,14 @@ order: 6
 
 _(A Brynn Story)_
 
+by Juno Threadborne
+
+---
+
+[Download the PDF here](https://docs.thrd.me/elsebeneath/The%20Loaf%20That%20Wouldn't%20Listen.pdf)
+
+---
+
 Brynn had been at it since dawn.  
 Three tries. Three failures.
 

@@ -16,6 +16,10 @@ by Juno Threadborne
 
 ---
 
+[Download the PDF here](https://docs.thrd.me/elsebeneath/Elsewhere%2C%20Briefly.pdf)
+
+---
+
 ### UNNECESSARY INTRODUCTION.
 
 This place you seek,

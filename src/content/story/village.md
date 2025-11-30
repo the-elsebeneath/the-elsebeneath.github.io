@@ -14,6 +14,12 @@ order: 3
 
 by Juno Threadborne
 
+---
+
+[Download the PDF here](https://docs.thrd.me/elsebeneath/The%20Village%20of%20Voicekeepers.pdf)
+
+---
+
 # Chapter 1: *The Wind in the Walls*
 
 Sam didn’t mean to fall asleep.

@@ -12,6 +12,12 @@ order: 2
 
 by Juno Threadborne
 
+---
+
+[Download the PDF here](https://docs.thrd.me/elsebeneath/The%20Mountain%20of%20Mastery.pdf)
+
+---
+
 *Part 3 of The Elsebeneath Trilogy*
 
 # Chapter One: The Puzzle and the Stuck Sides

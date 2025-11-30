@@ -16,6 +16,11 @@ by Juno Threadborne
 
 ---
 
+[Download the PDF here](https://docs.thrd.me/elsebeneath/A%20Hair%20Out%20of%20Place.pdf)
+
+
+---
+
 At Said-So Academy, everything was in its place. That was the point of the place.
 The uniforms matched. The clocks agreed. The grass outside was precisely short enough to whisper "controlled environment" without seeming military about it. Even the silence between class bells felt… _tucked in._
 
