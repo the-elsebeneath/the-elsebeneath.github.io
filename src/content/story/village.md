@@ -990,14 +990,6 @@ Then she turned slowly and headed back into the bakery, humming a tune Sam was a
 
 # Chapter 8: *The Tangle*
 
-***
-
-## Minor Considerations:
-
-- **Pacing in Chapter 8:** The discovery of the yo-yo, the shift to recognizing the Elsebeneath is "forgetting how to be itself," and the decision to seek Tilda, all happen relatively quickly. While effective, it could potentially allow for a tiny bit more lingering on the emotional impact of the Elsebeneath's decline before immediately jumping to the solution. However, given the immediate emotional weight brought by Stephen's chapter, this might be a necessary narrative push.
-
-***
-
 Sam and Fen walked in silence for a while, following a path that used to be a street.
 
 The village was quieter now. Fewer voices in the wind. Fewer lights in the windows. Like the Elsebeneath itself was holding its breath.
