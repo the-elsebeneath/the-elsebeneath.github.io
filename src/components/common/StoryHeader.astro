@@ -8,7 +8,7 @@ interface Props {
 
 const { entry }: Props = Astro.props;
 
-const { title, cover, coverAlt } = entry.data;
+const { title, cover, coverAlt, audio } = entry.data;
 ---
 
 <div class="mt-2">
@@ -27,3 +27,22 @@ const { title, cover, coverAlt } = entry.data;
     )
   }
 </div>
+
+{
+  audio && (
+    <div class="mb-6">
+      <audio
+        controls
+        preload="metadata"
+        src={audio}
+        style="width: 100%;"
+      >
+        <source src={audio} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <p class="mt-2 text-sm">
+        <a href={audio}>If audio does not start, open the MP3 directly</a>
+      </p>
+    </div>
+  )
+}
