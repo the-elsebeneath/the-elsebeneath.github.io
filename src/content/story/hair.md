@@ -18,6 +18,11 @@ by Juno Threadborne
 
 [Download the PDF here](https://docs.thrd.me/elsebeneath/A%20Hair%20Out%20of%20Place.pdf)
 
+<audio controls preload="none" style="width: 100%; margin: 1rem 0;">
+	<source src="https://audio.thrd.me/hair.mp3" type="audio/mpeg" />
+	Your browser does not support the audio element.
+</audio>
+
 
 ---
 
