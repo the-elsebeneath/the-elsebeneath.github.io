@@ -21,7 +21,7 @@ by Juno Threadborne
 
 ---
 
-# Chapter One: The Tangle
+## Chapter One: The Tangle
 
 Sam stood in the driveway, holding his yo-yo like it was mocking him.
 
@@ -85,7 +85,7 @@ Then—he stood up. Yo-yo still tangled, heart still sore, but maybe… _just ma
 
 And he followed.
 
-# Chapter Two: The Bird Who Never Sang
+## Chapter Two: The Bird Who Never Sang
 
 Practicio led Sam along the winding path. The sky above bloomed into soft peach blush.
 
@@ -142,7 +142,7 @@ Sam folded and tucked the page in his pocket.
 
 The wind carried a few quiet notes behind them as they walked away—half a melody, unfinished… but still beautiful.
 
-# Chapter Three: The Snail Who Raced a Cheetah
+## Chapter Three: The Snail Who Raced a Cheetah
 
 The next part of the island felt _slower_. The air was thick with the scent of rain and earth, and the grass here grew in soft spirals that curled inward like sleepy question marks.
 
@@ -162,7 +162,7 @@ The snail sighed and waved an eye stalk in return. "Name's **Zoomie**. I was goi
 
 Practicio nodded. "He was doing well. Making progress. Consistent. Dedicated."
 
-Zoomie gave a proud little shrug. "Then one day, I looked up—and saw a cheetah."
+Zoomie gave a shy little shrug. "Then one day, I looked up—and saw a cheetah."
 
 Sam tilted his head. "An _actual_ cheetah?"
 
@@ -192,7 +192,7 @@ He looked at the track. Then at Sam.  Then at the poster in Sam's hand.
 
 He inched forward — just a little — and left a fresh, slow trail of slime behind him, glistening in the lavender light.
 
-# Chapter Four: The Painter Who Erased the World
+## Chapter Four: The Painter Who Erased the World
 
 The path curved gently into a forest of giant mushrooms and sea-glass trees. Light filtered through the leaves in ripples, like they were underwater.
 
@@ -245,7 +245,7 @@ Inky picked up a few brushes, and tilted her head toward Sam.
 
 "Keep it."
 
-# Chapter Four and a Half: The Shortcut
+## Chapter Four and a Half: The Shortcut
 
 After saying goodbye to Inky, the trail forked.
 
@@ -291,7 +291,7 @@ Then turned away from it.
 
 Practicio smiled, and they walked on.
 
-# Chapter Five: Fall Number 4,030
+## Chapter Five: Fall Number 4,030
 
 The path rose again, gently winding up a hill scattered with pebbles and wildflowers. The sky above had faded into soft golden-pink, like a sunset that didn't want to end.
 
@@ -347,7 +347,7 @@ The wind shifted.
 
 And then—
 
-# Chapter Six: The First Trick
+## Chapter Six: The First Trick
 
 The driveway was back. The sky was blue again. The yo-yo was still in his hand.
 
