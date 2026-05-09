@@ -31,62 +31,16 @@ const baseUrl = "https://elsebeneath.online";
     <meta charset="UTF-8" />
     <!-- CRITICAL: CONSENT MODE MUST BE ABSOLUTELY FIRST -->
     <script>
-      // Initialize dataLayer and gtag function IMMEDIATELY
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         window.dataLayer.push(arguments);
       }
-
-      // Expose a reusable consent updater for cookie UI and debugging.
-      window.updateAnalyticsConsent = function (isGranted) {
-        const granted = {
-          ad_storage: "granted",
-          ad_user_data: "granted",
-          ad_personalization: "granted",
-          analytics_storage: "granted",
-        };
-        const denied = {
-          ad_storage: "denied",
-          ad_user_data: "denied",
-          ad_personalization: "denied",
-          analytics_storage: "denied",
-        };
-        const state = isGranted ? granted : denied;
-
-        try {
-          localStorage.setItem("cookie_consent", isGranted ? "yes" : "no");
-        } catch (e) {
-          console.log("localStorage not available");
-        }
-
-        gtag("consent", "update", state);
-      };
-
-      // Check for existing consent preference
-      let savedConsent = null;
-      try {
-        savedConsent = localStorage.getItem("cookie_consent");
-      } catch (e) {
-        console.log("localStorage not available");
-      }
-
-      // Set default consent state based on saved preference or deny all
-      if (savedConsent === "yes") {
-        gtag("consent", "default", {
-          ad_storage: "granted",
-          ad_user_data: "granted",
-          ad_personalization: "granted",
-          analytics_storage: "granted",
-        });
-      } else {
-        gtag("consent", "default", {
-          ad_storage: "denied",
-          ad_user_data: "denied",
-          ad_personalization: "denied",
-          analytics_storage: "denied",
-          wait_for_update: 500,
-        });
-      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "granted",
+      });
     </script>
 
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
