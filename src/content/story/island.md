@@ -6,6 +6,7 @@ cover: "@assets/books/island-cover.webp"
 audio: "https://audio.thrd.me/island2.mp3"
 readingTime: "17 min"
 order: 0
+featured: true
 ---
 
 
