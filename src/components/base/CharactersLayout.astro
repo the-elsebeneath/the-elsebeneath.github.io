@@ -37,6 +37,31 @@ const baseUrl = "https://elsebeneath.online";
         window.dataLayer.push(arguments);
       }
 
+      // Expose a reusable consent updater for cookie UI and debugging.
+      window.updateAnalyticsConsent = function (isGranted) {
+        const granted = {
+          ad_storage: "granted",
+          ad_user_data: "granted",
+          ad_personalization: "granted",
+          analytics_storage: "granted",
+        };
+        const denied = {
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          analytics_storage: "denied",
+        };
+        const state = isGranted ? granted : denied;
+
+        try {
+          localStorage.setItem("cookie_consent", isGranted ? "yes" : "no");
+        } catch (e) {
+          console.log("localStorage not available");
+        }
+
+        gtag("consent", "update", state);
+      };
+
       // Check for existing consent preference
       let savedConsent = null;
       try {
@@ -96,6 +121,10 @@ const baseUrl = "https://elsebeneath.online";
     <!-- Google Tag Manager - AFTER consent setup -->
     <script>
       (function (w, d, s, l, i) {
+        if (w.__gtmLoaded) {
+          return;
+        }
+        w.__gtmLoaded = true;
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
