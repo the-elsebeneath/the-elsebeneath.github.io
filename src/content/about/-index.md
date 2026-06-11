@@ -53,16 +53,14 @@ Still need someone to say, “You’re doing okay.”<br/><br/>
 
 ### 🤖 So... was this written by AI?<br/><br/>
 
-Sort of. But not the way you might think.<br/><br/>
+No. But I'm also not dogmatic about *not* using AI.<br/><br/>
 
-These stories were co-authored with GPT-4, an artificial intelligence model developed by OpenAI. But the shape, tone, and heartbeat of the stories? That’s all me.<br/><br/>
+These stories were co-authored with a whole host of AI products. But the shape, tone, and heartbeat of the stories? That’s all me.<br/><br/>
 
-AI was a creative partner—like a ghost that’s read every book in the world, but needs you to remind it why stories matter.<br/><br/>
-
-I guided the narratives, rewrote every line that didn’t sing, and held the emotional compass the entire way through.<br/><br/>
+AI was used here for brainstorming, and exploring ideas through self-reflection.  Sort of like a journal that happens to talk back.<br/><br/>
 
 This is not "AI slop."<br/>
-This is something else entirely.<br/><br/>
+This is creative work using modern tools in fun ways.<br/><br/>
 
 ---
 
