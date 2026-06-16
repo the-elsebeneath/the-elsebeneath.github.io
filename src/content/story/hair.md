@@ -3,7 +3,6 @@ title: "A Hair Out of Place"
 name: "hair"
 description: "A Said-So Academy Story"
 cover: "@assets/books/hair-cover.png"
-audio: "https://audio.thrd.me/hair.mp3"
 readingTime: "12 min"
 order: 7
 ---
@@ -16,10 +15,6 @@ by Juno Threadborne
 
 ---
 
-[Download the PDF here](https://docs.thrd.me/elsebeneath/A%20Hair%20Out%20of%20Place.pdf)
-
----
-
 At Said-So Academy, everything was in its place. That was the point of the place.
 The uniforms matched. The clocks agreed. The grass outside was precisely short enough to whisper "controlled environment" without seeming military about it. Even the silence between class bells felt… _tucked in._
 
@@ -29,7 +24,7 @@ She had the kind of presence that made ceilings feel too low. Her hair was usual
 
 Fen watched her the way you might watch a thunderstorm blooming far away across a valley. Not fearful. Not fascinated, exactly. Just _aware_ in a way you couldn’t explain afterward.
 
-To most people, she was a student. A clever one. Two years ahead in everything and somehow still likable.
+To most people, she was a teacher. A clever one. Always organized and always listening.
 
 But to Fen?
 
