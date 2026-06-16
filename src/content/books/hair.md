@@ -2,6 +2,7 @@
 order: 10
 id: hair
 slug: hair
+arc: interludes
 title: A Hair Out of Place
 description: Fen's Crush
 image: "@assets/books/hair-cover.png"

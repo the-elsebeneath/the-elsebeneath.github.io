@@ -2,6 +2,7 @@
 order: 0
 id: island
 slug: island
+arc: sam-arc
 title: The Island of Almosts
 description: A quiet boy struggles with skill development.
 image: "@assets/books/island-cover.webp"

@@ -2,6 +2,7 @@
 order: 9
 id: theater
 slug: theater
+arc: interludes
 title: How It Didn't Happen
 description: A ribbon. A memory. A stage that remembers.
 image: "@assets/books/theater-cover.png"

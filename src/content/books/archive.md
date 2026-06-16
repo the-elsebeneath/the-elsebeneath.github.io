@@ -2,6 +2,7 @@
 order: 5
 id: archive
 slug: archive
+arc: voicekeeper
 title: The Archive of Unsaid Things
 description: A quiet boy finds himself in a library where forgotten thoughts gather like dust, waiting to be remembered.
 image: "@assets/books/archive-cover.webp"

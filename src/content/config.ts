@@ -91,6 +91,7 @@ const books = defineCollection({
       order: z.number().optional(),
       id: z.string().optional(),
       slug: z.string().optional(),
+      arc: z.enum(["sam-arc", "voicekeeper", "interludes"]).optional(),
       title: z.string(),
       description: z.string().optional(),
       image: image().optional(),

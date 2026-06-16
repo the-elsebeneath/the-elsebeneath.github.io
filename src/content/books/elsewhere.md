@@ -2,6 +2,7 @@
 order: 7
 id: elsewhere
 slug: elsewhere
+arc: interludes
 title: Elsewhere, Briefly
 description: A quiet boy finds himself in a library where forgotten thoughts gather like dust, waiting to be remembered.
 image: "@assets/books/elsewhere-cover.png"

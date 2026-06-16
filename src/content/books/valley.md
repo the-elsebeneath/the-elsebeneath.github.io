@@ -2,6 +2,7 @@
 order: 1
 id: valley
 slug: valley
+arc: sam-arc
 title: The Valley of Yet-Stills
 description: A quiet boy struggles with skill development.
 image: "@assets/books/valley-cover.webp"

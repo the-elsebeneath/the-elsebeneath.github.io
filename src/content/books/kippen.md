@@ -2,6 +2,7 @@
 order: 4
 id: kippen
 slug: kippen
+arc: interludes
 title: A Kitten Named Kippen
 description: A kitten's adventure.
 image: "@assets/books/kippen-cover.png"

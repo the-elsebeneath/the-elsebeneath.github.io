@@ -2,6 +2,7 @@
 order: 8
 id: brynn
 slug: brynn
+arc: interludes
 title: The Loaf That Wouldn't Listen
 description: For when nothing turns out right.
 image: "@assets/books/brynn-cover.png"

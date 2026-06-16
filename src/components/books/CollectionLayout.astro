@@ -1,47 +1,32 @@
 ---
 import BaseLayout from "@components/base/BaseLayout.astro";
-import BookCard from "@components/books/Card.astro"; // Rename if you like
-import Pagination from "@components/common/Pagination.astro";
+import BookCard from "@components/books/Card.astro";
 import type { BooksEntry } from "@/types";
 import EmotionalCompass, {
   type Story,
 } from "@components/compass/EmotionalCompass";
-import { Image } from "astro:assets";
-import { render } from "astro:content";
+import { arcs, fallbackArcKey, type ArcKey } from "@lib/arcs";
 
 interface Props {
   entryIndex: BooksEntry;
   entries: BooksEntry[];
   storyRecommendations: Record<string, Story[]>;
-  pageIndex: number;
-  pageCount: number;
-  featuredEntry?: BooksEntry; // Optional featured book
 }
 
-const {
-  entryIndex,
-  entries,
-  storyRecommendations,
-  pageIndex,
-  pageCount,
-  featuredEntry,
-}: Props = Astro.props;
+const { entryIndex, entries, storyRecommendations }: Props = Astro.props;
 
-// Helper function to create tracking-friendly slug from title
-function createTrackingId(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "") // Remove special chars
-    .replace(/\s+/g, "-") // Replace spaces with hyphens
-    .replace(/^-+|-+$/g, ""); // Remove leading/trailing hyphens
-}
+const validKeys = new Set(arcs.map((a) => a.key));
 
-// Render featured entry content if it exists
-let FeaturedContent;
-if (featuredEntry) {
-  const rendered = await render(featuredEntry);
-  FeaturedContent = rendered.Content;
-}
+// Group books into their arcs (in the order each arc defines), dropping
+// hidden books. Anything with a missing/unknown arc falls into the fallback.
+const visible = entries.filter((e) => !e.data.hidden);
+const sections = arcs.map((arc) => ({
+  arc,
+  books: visible.filter((e) => {
+    const key = (e.data.arc ?? fallbackArcKey) as ArcKey;
+    return (validKeys.has(key) ? key : fallbackArcKey) === arc.key;
+  }),
+}));
 ---
 
 <BaseLayout
@@ -60,112 +45,78 @@ if (featuredEntry) {
             A set of adventures in the <em>Elsebeneath</em>, a whimsical world
             of becoming.
           </p>
+
+          <!-- Jump-to-arc navigation -->
+          <nav
+            class="mt-5 flex flex-wrap justify-center gap-2"
+            aria-label="Story arcs"
+          >
+            {
+              sections.map(({ arc }) => (
+                <a
+                  href={`#${arc.id}`}
+                  class="rounded-full glass px-4 py-2 text-sm font-secondary font-semibold text-txt-p transition hover:bg-accent hover:text-white dark:text-darkmode-txt-p"
+                >
+                  {arc.title}
+                </a>
+              ))
+            }
+          </nav>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Work Section -->
+  <!-- One section per arc -->
   {
-  featuredEntry && (
-    <section class="section">
-      <div class="container">
-        <div class="text-center mb-8">
-          <h2 class="text-3xl font-bold text-txt-p dark:text-darkmode-txt-p intersect:animate-fade opacity-0">
-            Featured Work
-          </h2>
-        </div>
-        <div class="row justify-center">
-          <article class="lg:col-10">
-            <div class="glass rounded-lg p-4 intersect:animate-fadeUp opacity-0">
-              <div class="flex flex-wrap md:flex-nowrap items-start gap-6">
-                <!-- Image Container -->
-                <div class="w-full md:w-1/3 flex-shrink-0">
-                  <div class="aspect-[3/4] overflow-hidden rounded-lg">
-                    <Image
-                      class="w-full h-full object-cover"
-                      src={featuredEntry.data.image ?? ""}
-                      alt={featuredEntry.data.imageAlt || featuredEntry.data.title}
-                      width={400}
-                      height={533}
-                      loading="eager"
-                    />
-                  </div>
-                </div>
-
-                <!-- Content Container -->
-                <div class="w-full md:w-2/3 flex flex-col justify-between min-h-[200px]">
-                  <div>
-                    <h3 class="text-2xl font-bold mb-3 text-txt-p dark:text-darkmode-txt-p">
-                      {featuredEntry.data.title}
-                    </h3>
-                    {featuredEntry.data.author && (
-                      <p class="text-sm text-txt-s dark:text-darkmode-txt-s mb-3 italic">
-                        by {featuredEntry.data.author}
-                      </p>
-                    )}
-                    <div class="prose prose-sm max-w-none text-txt-s dark:text-darkmode-txt-s">
-                      <FeaturedContent />
-                    </div>
-                  </div>
-
-                  <!-- Action Buttons -->
-                  <div class="flex flex-wrap gap-3 mt-6">
-                    {featuredEntry.data.readLink && (
-                      <a
-                        href={featuredEntry.data.readLink}
-                        class="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-white font-medium shadow hover:bg-accent/80 transition-colors"
-                        data-track-category="read-full-story"
-                        data-track-id={createTrackingId(featuredEntry.data.title)}
-                        data-track-label={featuredEntry.data.title}
-                      >
-                        Read More
-                        <span class="text-lg">→</span>
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-  <!-- All Books Section -->
-  <section class="section m-2">
-    <div class="container">
-      {
-        featuredEntry && (
+    sections.map(({ arc, books }) => (
+      <section id={arc.id} class="section scroll-mt-24 m-2">
+        <div class="container">
           <div class="text-center mb-8">
-            <h2 class="text-2xl font-bold text-txt-p dark:text-darkmode-txt-p intersect:animate-fade opacity-0">
-              All Stories
+            <h2 class="text-3xl font-bold text-txt-p dark:text-darkmode-txt-p intersect:animate-fade opacity-0">
+              {arc.title}
             </h2>
+            <p class="mt-2 text-txt-s dark:text-darkmode-txt-s italic">
+              {arc.tagline}
+            </p>
           </div>
-        )
-      }
 
-      <div class="flex flex-wrap justify-center">
-        {
-          entries
-            .filter((e) => !e.data.hidden)
-            .map((entry) => (
+          <div class="flex flex-wrap justify-center">
+            {books.map((entry) => (
               <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
                 <BookCard entry={entry} />
               </div>
-            ))
-        }
-      </div>
-      <Pagination
-        collection="books"
-        pageIndex={pageIndex}
-        pageCount={pageCount}
-      />
-      <div>
-        <EmotionalCompass storyData={storyRecommendations} client:load />
-      </div>
+            ))}
+
+            {arc.placeholders?.map((p) => (
+              <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+                <div class="h-full m-2 bg-gradient-to-br gradient rounded-lg intersect:animate-fadeUp opacity-0">
+                  <div class="glass h-full rounded-lg overflow-hidden shadow-md">
+                    <div class="relative aspect-[2/3] flex flex-col items-center justify-center text-center p-6">
+                      <span class="text-xs uppercase tracking-widest text-txt-s dark:text-darkmode-txt-s mb-3">
+                        Coming soon
+                      </span>
+                      <h3 class="text-lg font-semibold text-txt-p dark:text-darkmode-txt-p">
+                        {p.title}
+                      </h3>
+                      <p class="mt-2 text-sm text-txt-s dark:text-darkmode-txt-s">
+                        {p.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <!-- Emotional compass recommender -->
+  <section class="section m-2">
+    <div class="container">
+      <EmotionalCompass storyData={storyRecommendations} client:load />
     </div>
   </section>
 </BaseLayout>

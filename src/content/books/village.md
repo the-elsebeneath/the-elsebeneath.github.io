@@ -2,6 +2,7 @@
 order: 3
 id: village
 slug: village
+arc: voicekeeper
 title: The Village of Voicekeepers
 description: A quiet boy struggles with skill development.
 image: "@assets/books/village-cover.webp"

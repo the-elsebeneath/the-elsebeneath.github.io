@@ -2,6 +2,7 @@
 order: 2
 id: mountain
 slug: mountain
+arc: sam-arc
 title: The Mountain of Mastery
 description: A quiet boy struggles with skill development.
 image: "@assets/books/mountain-cover.webp"
